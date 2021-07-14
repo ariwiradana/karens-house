@@ -75,7 +75,7 @@ function read_other_room() {
 						[jQuery(
                             `<div class="item">
                                 <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}"/>
-                                <a href="rooms/index.html?type=${item.id}">
+                                <a href="rooms/?type=${item.id}">
                                     <div class="index-room-type-overlay">
                                         <h6 class="index-room-type-title mb-2">${item.title}</h6>
                                         <p class="index-room-type-desc">${item.desc}</p>
