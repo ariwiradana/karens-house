@@ -713,6 +713,7 @@ footer h5{
     letter-spacing: 1px;
     text-transform: uppercase;
     color: var(--text-dark);
+    margin: 0;
 }
 
 .footer-content{
