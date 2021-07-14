@@ -1011,6 +1011,10 @@ footer h5{
         padding: 0rem 2rem
     }
 
+    .room-type-content img{
+        height: 40vh;
+    }
+
     .gallery-header {
         margin-top: 3.5rem;
         padding: 10vh 0vh;
