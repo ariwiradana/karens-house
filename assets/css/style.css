@@ -35,6 +35,9 @@ html {
     scroll-behavior: smooth;
 }
 
+section .pages{
+    display: none;
+}
 
 .carousel-item {
     background-size: cover;

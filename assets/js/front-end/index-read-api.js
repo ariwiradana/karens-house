@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    // readCarousel();
+    readCarousel();
     roomType();
-    dummyImg();
+    // dummyImg();
 });
 
 function roomType() {
@@ -71,6 +71,7 @@ function readCarousel() {
         type: "get",
         success: function (response) {
             if (response.status_code == 200) {
+                $('section .pages').fadeIn();
                 $.each(response.data, function (i, item) {
                     let totalItems = $(".carousel-item").length;
 
@@ -105,6 +106,7 @@ function dummyImg() {
     let itemClass;
     let itemIndicatorsClass;
     startLoading()
+    $('section .pages').fadeIn();
     $.each(data, function (i, item) {
         let totalItems = $(".carousel-item").length;
 
