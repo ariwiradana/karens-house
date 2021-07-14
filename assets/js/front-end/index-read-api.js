@@ -46,7 +46,7 @@ function roomType() {
                                         </div>
                                     </div>
 
-                                    <p class="room-type-desc">${item.desc.length > 200 ? item.desc.substring(0, 200) + '...' : item.desc}</p>
+                                    <p class="room-type-desc">${item.desc.length > 150 ? item.desc.substring(0, 150) + '...' : item.desc}</p>
                                     <a href="rooms/?type=${item.id}">
                                         <p class="explore"><small>Explore <span>&#10230;</span></small></p>
                                     </a>
