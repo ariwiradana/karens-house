@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location | Karéns House Ubud</title>
+
+    <link rel="stylesheet" href="../../assets/css/bootstrap/bootstrap.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link rel="stylesheet" href="../../assets/owlcarousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="../../assets/owlcarousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="../../assets/uicons-regular-rounded/css/uicons-regular-rounded.css">
+
+    <!-- user css -->
+    <link rel="stylesheet" href="../../assets/css/loading.css">
+    <link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+
+<body>
+
+    <div class="loading-container animate__animated"></div>
+
+    <!-- navbar white -->
+    <div class="nav-white-container">
+        <div class="nav-white-content">
+            <img src="../../assets/logo/logo-black.svg" alt="">
+            <div class="nav-white-items-link">
+                <div class="nav-white-link">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="nav-white-link dropdown">
+                    <a href="#">Rooms <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="../rooms/?type=1">Family Room</a>
+                        <hr>
+                        <a href="../rooms/?type=2">Double Room Terrace View</a>
+                        <hr>
+                        <a href="../rooms/?type=3">Double Room Mountain View</a>
+                    </div>
+                </div>
+                <div class="nav-white-link">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+                <div class="nav-white-link">
+                    <a href="../location/index.html">Location</a>
+                </div>
+                <div class="nav-white-link">
+                    <a href="../contact-us/index.html">Contact Us</a>
+                </div>
+                <div class="nav-white-link nav-book">
+                    <a href="">Book Now <span>&#10230;</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- nav mobile white -->
+    <div class="nav-white-mobile-container">
+        <div class="nav-white-mobile-content">
+            <a href="../index.html">
+                <img class="nav-white-mobile-logo" src="../../assets/logo/logo-black.svg" alt="">
+            </a>
+            <div class="nav-white-mobile-item">
+                <img class="nav-white-menu-icon" src="../../assets/icon/bars-primary-light.svg" alt="">
+                <div class="nav-white-book">
+                    <a href="">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- sidenav mobile -->
+    <div class="sidenav-mobile-container">
+        <div class="sidenav-mobile-content">
+            <div class="sidenav-mobile-header">
+                <img class="sidenav-mobile-logo" src="../../assets/logo/logo-black.svg" alt="">
+                <i class="fi-rr-cross"></i>
+            </div>
+            <div class="sidenav-mobile-body">
+                <div class="sidenav-mobile-item active">
+                    <a href="../index.html">Home</a>
+                </div>
+                <div class="sidenav-mobile-item sidenav-dropdown">
+                    <a href="#">Rooms <i class="fi-rr-angle-small-down"></i></a>
+                </div>
+                <div class="sidenav-dropdown-container">
+                    <div class="sidenav-dropdown-content">
+                        <a href="../rooms/?type=1">Family Room</a>
+                        <hr>
+                        <a href="../rooms/?type=2">Double Room Terrace View</a>
+                        <hr>
+                        <a href="../rooms/?type=3">Double Room Mountain View</a>
+                    </div>
+                </div>
+                <div class="sidenav-mobile-item">
+                    <a href="../gallery/index.html">Gallery</a>
+                </div>
+                <div class="sidenav-mobile-item">
+                    <a href="../location/index.html">Location</a>
+                </div>
+                <div class="sidenav-mobile-item">
+                    <a href="../contact-us/index.html">Contact Us</a>
+                </div>
+                <hr>
+                <div class="sidenav-mobile-footer">
+                    <p class="mb-2">Stay connected with us</p>
+                    <div class="sidenav-mobile-footer-content">
+                        <a href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-sm">
+        <div class="map-container">
+            <div class="map-content"></div>
+            <div class="map-location-content">
+                <div class="map-header-title">Location</div>
+                <div id="location">
+                    <div class="map-location-item">
+                        <span>1. <span class="location-name">Monkey Forest</span></span>
+                        <i class="fi-rr-picture"></i>
+                    </div>
+                    <div class="map-location-item">
+                        <span>2. <span class="location-name">Waterfall Forest</span></span>
+                        <i class="fi-rr-picture"></i>
+                    </div>
+                    <div class="map-location-item">
+                        <span>3. <span class="location-name">Beach Forest</span></span>
+                        <i class="fi-rr-picture"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="../../assets/js/jquery/jquery-3.6.0.js"></script>
+    <script src="../../assets/js/bootstrap/bootstrap.min.js"></script>
+    <script src="../../assets/fontawesome/js/all.js" data-auto-replace-svg="nest"></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="../../assets/owlcarousel/dist/owl.carousel.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="../../assets/js/custom/data-aos-demo.js"></script>
+
+    <!-- user js -->
+    <script src="../../assets/js/custom/custom.js"></script>
+    <script src="../../assets/js/front-end/location-read-api.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=initMap"
+        async defer></script>
+    <script>
+        let map;
+
+        function initMap() {
+            map = new google.maps.Map(document.querySelector(".map-content"), {
+                center: {
+                    lat: -8.448348883235509,
+                    lng: 115.25334555611327
+                },
+                zoom: 16,
+            });
+        }
+    </script>
+</body>
+
+</html>
