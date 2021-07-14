@@ -3,16 +3,10 @@ function startLoading() {
     $('.loading-container').html(`
         <div class="loading-content">
             <div id="loading-content" class="animate__animated animate__fadeInUp">
-                <div class="lds-grid">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div class="loader">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
                 </div>
             </div>
         </div>

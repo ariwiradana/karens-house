@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    readCarousel();
+    // readCarousel();
     roomType();
-    // dummyImg();
+    dummyImg();
 });
 
 function roomType() {
@@ -94,6 +94,7 @@ function readCarousel() {
                 `);
 
                 });
+
                 stopLoading()
             }
         }
@@ -131,5 +132,5 @@ function dummyImg() {
     });
     setInterval(function () {
         stopLoading();
-    }, 2000);
+    }, 4000);
 }
