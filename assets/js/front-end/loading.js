@@ -3,6 +3,7 @@ function startLoading() {
     $('.loading-container').html(`
         <div class="loading-content">
             <div id="loading-content" class="animate__animated animate__fadeInUp">
+                <img src="assets/logo/logo.svg">
                 <div class="loader">
                     <div class="bounce1"></div>
                     <div class="bounce2"></div>

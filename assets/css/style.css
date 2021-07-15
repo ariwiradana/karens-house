@@ -858,9 +858,10 @@ footer h5{
     }
 
     .sidenav-mobile-body {
-        margin-top: 2rem;
         box-sizing: border-box;
-        padding: 0rem 2rem;
+        padding: 1.5rem 2rem;
+        height: 60vh;
+        overflow-y: scroll;
     }
 
 
