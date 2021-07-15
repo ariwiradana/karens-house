@@ -73,7 +73,7 @@ function read_other_room() {
 				$.each(data, function (i, item) {
 					owl.trigger('add.owl.carousel',
 						[jQuery(
-                            `<div class="item">
+							`<div class="item">
                                 <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}"/>
                                 <a href="rooms/?type=${item.id}">
                                     <div class="index-room-type-overlay">

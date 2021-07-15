@@ -36,7 +36,7 @@ html {
     scroll-behavior: smooth;
 }
 
-section .pages{
+section .pages {
     display: none;
 }
 
@@ -398,12 +398,12 @@ section .pages{
     font-weight: 300;
 }
 
-.intro-content .intro-title {
+.intro-content .page-title {
     font-family: "Crismon", serif;
     color: var(--text-dark);
 }
 
-.intro-content .intro-title::after {
+.intro-content .page-title::after {
     width: 42px;
     display: block;
     content: '';
@@ -647,6 +647,7 @@ section .pages{
 .map-container {
     display: flex;
     justify-content: space-between;
+    margin-top: 4.2rem;
 }
 
 .map-content {
@@ -705,13 +706,14 @@ section .pages{
     color: var(--primary-light);
     margin-bottom: 1rem;
 }
-footer{
+
+footer {
     box-sizing: border-box;
     padding: 3rem;
     background-color: white;
 }
 
-footer h5{
+footer h5 {
     font-size: 14px;
     text-align: center;
     letter-spacing: 1px;
@@ -720,7 +722,7 @@ footer h5{
     margin: 0;
 }
 
-.footer-content{
+.footer-content {
     display: flex;
 }
 
@@ -996,11 +998,11 @@ footer h5{
         padding: 2rem;
     }
 
-    .intro-content .intro-title {
+    .intro-content .page-title {
         font-size: 28px;
     }
 
-    .intro-content .intro-title::after {
+    .intro-content .page-title::after {
         margin-bottom: 0;
         width: 32px;
     }
@@ -1017,7 +1019,7 @@ footer h5{
         padding: 0rem 2rem
     }
 
-    .room-type-content img{
+    .room-type-content img {
         height: 40vh;
     }
 

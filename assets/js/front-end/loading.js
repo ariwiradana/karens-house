@@ -1,9 +1,19 @@
 function startLoading() {
     $('body').css("overflow", "hidden");
+
+    let path = "";
+    let title = $('title').text();
+
+    if (title == "Karéns House Ubud | Hidden Paradise of Ubud") {
+        path = "assets";
+    } else {
+        path = "../assets";
+    }
+
     $('.loading-container').html(`
         <div class="loading-content">
             <div id="loading-content" class="animate__animated animate__fadeInUp">
-                <img src="assets/logo/logo.svg">
+                <img src="${path}/logo/logo.svg">
                 <div class="loader">
                     <div class="bounce1"></div>
                     <div class="bounce2"></div>
