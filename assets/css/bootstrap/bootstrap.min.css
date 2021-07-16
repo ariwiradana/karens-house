@@ -4251,7 +4251,7 @@ tbody.collapse.show {
 }
 
 .nav-tabs {
-    border-bottom: 1px solid #dee2e6
+    border-bottom: 1px solid rgba(0, 0, 0, .05)
 }
 
 .nav-tabs .nav-item {
@@ -4259,14 +4259,14 @@ tbody.collapse.show {
 }
 
 .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem
+    font-size: 13px;
 }
 
 .nav-tabs .nav-link:focus,
 .nav-tabs .nav-link:hover {
-    border-color: #e9ecef #e9ecef #dee2e6
+    border-left: 1px solid rgba(0, 0, 0, .05);
+    border-right: 1px solid rgba(0, 0, 0, .05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
 }
 
 .nav-tabs .nav-link.disabled {
@@ -4279,7 +4279,9 @@ tbody.collapse.show {
 .nav-tabs .nav-link.active {
     color: #495057;
     background-color: #fff;
-    border-color: #dee2e6 #dee2e6 #fff
+    border-left: 1px solid rgba(0, 0, 0, .05);
+    border-right: 1px solid rgba(0, 0, 0, .05);
+    border-top: 1px solid rgba(0, 0, 0, .05);
 }
 
 .nav-tabs .dropdown-menu {

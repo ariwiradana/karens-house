@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	// loadFoto();
-	dummyImg();
+	loadFoto();
+	// dummyImg();
 });
 
 function loadFoto() {
