@@ -39,7 +39,7 @@ function dummyImg() {
 
 	$.each(data, function (i, data) {
 		$('.gallery-content').append(`
-			<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="fade-up" data-aos-duration="1000">
+			<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
 				<div class="gallery-item">
 					<div class="gallery-overlay"></div>
 					<img class="gallery-img" src="https://source.unsplash.com/random?sig=${data}">

@@ -91,11 +91,23 @@
 
 
 @media only screen and (max-width: 600px) {
-    .loading-content img{
+    .loading-content img {
         height: 50px;
     }
 
-    .loader{
-        margin-top: 1rem;;
+    .loader {
+        margin-top: 1rem;
+        ;
+    }
+}
+
+@media only screen and (max-width: 1200px) {
+    .loading-content img {
+        height: 50px;
+    }
+
+    .loader {
+        margin-top: 1rem;
+        ;
     }
 }
