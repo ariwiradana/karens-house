@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 function read_room_type() {
-	// startLoading();
+	startLoading();
 	let id = window.location.href.split('=')[1];
 
 
@@ -14,6 +14,7 @@ function read_room_type() {
 		dataType: 'json',
 		success: function (response) {
 			if (response.status_code == 200) {
+				stopLoading();
 				const data = response.data[0];
 				const facilities = response.data[0].facilities
 
@@ -32,8 +33,6 @@ function read_room_type() {
 						</div>
 					`);
 				});
-
-				// stopLoading();
 			}
 		}
 	});
