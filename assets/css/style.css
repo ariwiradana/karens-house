@@ -302,8 +302,16 @@ section .pages {
     font-size: 14px !important;
 }
 
-.nav-white-content .nav-white-items-link .nav-book span {
+.nav-white-content .nav-white-items-link .nav-book .book {
+    color: var(--primary-light);
+    font-size: 14px !important;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-white-content .nav-white-items-link .nav-book .icon-arrow {
     font-size: 18px !important;
+    color: var(--primary-light);
 }
 
 .nav-white-content .nav-white-items-link .nav-book:hover {
@@ -723,10 +731,50 @@ section .pages {
     color: var(--primary-light);
 }
 
-.gm-ui-hover-effect{
+.gm-ui-hover-effect {
     outline: none !important;
     border: none !important;
     background: none !important;
+}
+
+/* custom alert */
+.alert-container {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 99999;
+    height: 100vh;
+    display: flex;
+    align-items: flex-end;
+}
+
+.alert-content {
+    background-color: white;
+    box-sizing: border-box;
+    padding: 1.5rem;
+    width: 100%;
+}
+
+.alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.alert-header-title {
+    color: var(--text-secondary);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+}
+
+.alert-location {
+    font-size: 18px;
+    letter-spacing: 1px;
+    font-family: "Crismon", serif;
 }
 
 footer {
@@ -1079,7 +1127,7 @@ footer h5 {
         margin-bottom: 1.5rem;
     }
 
-    .map-item .map-header-title{
+    .map-item .map-header-title {
         margin-bottom: 1rem;
         padding: 1.5rem 1.5rem 0rem 1.5rem;
     }
@@ -1093,7 +1141,7 @@ footer h5 {
         padding: 2rem
     }
 
-    .map-location-item{
+    .map-location-item {
         padding: 1rem 1.5rem !important;
     }
 }
@@ -1179,7 +1227,7 @@ footer h5 {
         cursor: pointer;
     }
 
-    .nav-white-mobile-content .nav-white-mobile-item .nav-white-book a {
+    .nav-white-mobile-content .nav-white-mobile-item .nav-white-book span {
         font-size: 13px;
         text-transform: uppercase;
         color: white;
@@ -1430,7 +1478,7 @@ footer h5 {
         margin-bottom: 1.5rem;
     }
 
-    .map-item .map-header-title{
+    .map-item .map-header-title {
         margin-bottom: 1rem;
         padding: 1.5rem 1.5rem 0rem 1.5rem;
     }
@@ -1444,7 +1492,7 @@ footer h5 {
         padding: 2rem
     }
 
-    .map-location-item{
+    .map-location-item {
         padding: 1rem 1.5rem !important;
     }
 }

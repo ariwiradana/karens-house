@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    // readCarousel();
+    readCarousel();
     roomType();
-    dummyImg();
+    // dummyImg();
 });
 
 function roomType() {
