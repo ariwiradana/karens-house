@@ -928,7 +928,7 @@ section .pages {
     overflow: hidden;
     transition: .8s ease;
     position: relative;
-    height: 50vh;
+    height: 55vh;
 }
 
 .other-room-img-content .item::before {
@@ -982,7 +982,6 @@ section .pages {
 
 .other-room-overlay .overlay-desc {
     color: white;
-    letter-spacing: 1px;
 }
 
 .other-room-overlay .explore {

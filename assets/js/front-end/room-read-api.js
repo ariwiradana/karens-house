@@ -21,6 +21,7 @@ function read_room_type() {
 				$('#desc').text(data.desc);
 				$('#room_size').text(data.room_size);
 				$('#bed').text(data.bed);
+				$('#bathroom').text(data.bathroom);
 				$('#features-title').text(data.title);
 				$('#thumbnail').attr("src", `https://api-karens-house.000webhostapp.com/foto/room-type/${data.thumbnail}`);
 
