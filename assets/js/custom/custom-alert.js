@@ -23,7 +23,7 @@ function customAlert(header, title) {
         </div>
     `);
 
-    $('.alert-close').click(function () {
+    $('.alert-close, .alert-container').click(function () {
         closeAlert();
     });
 }
@@ -41,7 +41,7 @@ function customAlertBooking(header, title) {
         </div>
     `);
 
-    $('.alert-close').click(function () {
+    $('.alert-close, .alert-container').click(function () {
         closeAlert();
     });
 }

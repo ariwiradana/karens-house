@@ -1,7 +1,7 @@
 $(document).ready(function () {})
 
 
-const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData";
+const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData&map_ids=8d193001f940fde3";
 $.getScript(gmaps, function () {});
 
 
@@ -22,13 +22,16 @@ function mapData() {
 
 				const map = new google.maps.Map(document.querySelector(".map-content"), {
 					center: karenslocation,
-					zoom: 12,
+					zoom: 11,
 				});
 
 				const marker = new google.maps.Marker({
 					position: karenslocation,
 					map,
-					label: "K",
+					label: {
+						text: "K",
+						color: "white"
+					},
 					title: "Karens House"
 				});
 
@@ -38,6 +41,12 @@ function mapData() {
 					infoWindow.close();
 					infoWindow.setContent(marker.getTitle());
 					infoWindow.open(marker.getMap(), marker);
+					map.setCenter(karenslocation);
+					map.setZoom(14);
+
+					setTimeout(function () {
+						map.panTo(marker.getPosition());
+					}, 1000);
 				});
 
 				$.each(response.data, function (i, data) {
@@ -48,7 +57,11 @@ function mapData() {
 						position: pos,
 						map,
 						title: `${i + 1}. ${data.location_name}`,
-						label: `${i + 1}`,
+						label: {
+							text: `${i + 1}`,
+							color: "white"
+						},
+
 						optimized: false,
 					});
 
@@ -56,13 +69,22 @@ function mapData() {
 						infoWindow.close();
 						infoWindow.setContent(marker.getTitle());
 						infoWindow.open(marker.getMap(), marker);
+						map.setCenter(pos);
+						map.setZoom(14);
+
+						setTimeout(function () {
+							map.panTo(marker.getPosition());
+						}, 1000);
 					});
+
+
 					$(`#location-all-tab`).append(`
 						<div class="map-location-item">
 							<span>${i + 1}. <span class="location-name">${data.location_name}</span></span>
 							<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
 						</div>
-					`)
+					`);
+
 				});
 
 				$('.map-location-item').click(function () {
@@ -110,7 +132,10 @@ function mapData() {
 					const marker = new google.maps.Marker({
 						position: karenslocation,
 						map,
-						label: "K",
+						label: {
+							text: "K",
+							color: "white"
+						},
 						title: "Karens House"
 					});
 
@@ -120,6 +145,12 @@ function mapData() {
 						infoWindow.close();
 						infoWindow.setContent(marker.getTitle());
 						infoWindow.open(marker.getMap(), marker);
+						map.setCenter(karenslocation);
+						map.setZoom(14);
+
+						setTimeout(function () {
+							map.panTo(marker.getPosition());
+						}, 1000);
 					});
 
 					$.each(response.data, function (i, data) {
@@ -130,7 +161,10 @@ function mapData() {
 							position: pos,
 							map,
 							title: `${i + 1}. ${data.location_name}`,
-							label: `${i + 1}`,
+							label: {
+								text: `${i + 1}`,
+								color: "white"
+							},
 							optimized: false,
 						});
 
@@ -138,6 +172,12 @@ function mapData() {
 							infoWindow.close();
 							infoWindow.setContent(marker.getTitle());
 							infoWindow.open(marker.getMap(), marker);
+							map.setCenter(pos);
+							map.setZoom(14);
+
+							setTimeout(function () {
+								map.panTo(marker.getPosition());
+							}, 1000);
 						});
 					});
 
