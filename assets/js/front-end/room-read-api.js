@@ -18,6 +18,7 @@ function read_room_type() {
 				const data = response.data[0];
 				const facilities = response.data[0].facilities
 
+				$('title').text(`${data.title} | Karéns House Ubud`);
 				$('#title').text(data.title);
 				$('#desc').text(data.desc);
 				$('#room_size').text(data.room_size);
@@ -48,8 +49,8 @@ function dummyImg() {
 		$('#room-img').append(`
 
 		<div class="room-img-item">
-			<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
-				<img class="room-img" src="https://source.unsplash.com/random?sig=${data}">
+			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
+				<img class="room-img" src="https://source.unsplash.com/random?sig=${data + 10}">
 			</a>
 		</div>
 
