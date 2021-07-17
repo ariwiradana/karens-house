@@ -4,7 +4,7 @@ $(document).ready(function () {
 });
 
 function read_room_type() {
-	startLoading();
+	// startLoading();
 	let id = window.location.href.split('=')[1];
 
 
@@ -33,7 +33,7 @@ function read_room_type() {
 					`);
 				});
 
-				stopLoading();
+				// stopLoading();
 			}
 		}
 	});
