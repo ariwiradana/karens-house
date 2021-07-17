@@ -1,12 +1,12 @@
 $(document).ready(function () {
 	read_room_type();
 	read_other_room();
+	dummyImg();
 });
 
 function read_room_type() {
 	startLoading();
 	let id = window.location.href.split('=')[1];
-
 
 	$.ajax({
 		url: `https://api-karens-house.000webhostapp.com/read-room-type.php?id=${id}`,
@@ -32,20 +32,35 @@ function read_room_type() {
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
-
-					$('#room-img').append(`
-						<div class="room-img-item">
-							<a href="https://source.unsplash.com/random?sig=${i + 1}" data-fancybox="gallery" data-aos="fade-up"
-								data-aos-duration="1000">
-								<img class="room-img" src="https://source.unsplash.com/random?sig=${i + 1}">
-							</a>
-						</div>
-					`)
 				});
 
 			}
 		}
 	});
+}
+
+function dummyImg() {
+	const N = 5;
+	const data = Array.from(Array(N + 1).keys()).slice(1);
+	startLoading()
+
+	$.each(data, function (i, data) {
+		$('#room-img').append(`
+
+		<div class="room-img-item">
+			<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
+				<img class="room-img" src="https://source.unsplash.com/random?sig=${data}">
+			</a>
+		</div>
+
+	`)
+
+	});
+
+	setInterval(function () {
+		stopLoading();
+	}, 2000)
+
 }
 
 function read_other_room() {
@@ -83,13 +98,13 @@ function read_other_room() {
 						[jQuery(`
 							<div class="item">
 								<div class="other-room-overlay">
+									<p class="explore text-light text-left"><small>Room Type</small></p>
 									<h5 class="overlay-title">${item.title}</h5>
-									<p class="overlay-desc">${item.desc.length > 100 ? item.desc.substring(0, 100) : item.desc}</p>
 									<a href="./?type=${item.id}">
-										<p class="explore"><small>Explore <span>&#10230;</span></small></p>
+										<p class="explore"><small>Explore <span class="icon-explore">&#10230;</span></small></p>
 									</a>
 								</div>
-								<img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}" alt="">
+								<img src="https://source.unsplash.com/random?sig=${i}">
 							</div>
 							`)]);
 				});

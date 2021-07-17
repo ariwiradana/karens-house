@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	loadFoto();
-	// dummyImg();
+	// loadFoto();
+	dummyImg();
 });
 
 function loadFoto() {
@@ -39,8 +39,8 @@ function dummyImg() {
 
 	$.each(data, function (i, data) {
 		$('.gallery-content').append(`
-			<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
-				<div class="gallery-item">
+			<div class="gallery-item">
+				<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
 					<div class="gallery-overlay"></div>
 					<img class="gallery-img" src="https://source.unsplash.com/random?sig=${data}">
 					<div class="gallery-overlay-container">
@@ -48,8 +48,8 @@ function dummyImg() {
 							<i class="fi-rr-expand"></i>
 						</div
 					</div>
-				</div>
-			</a>
+				</a>
+			</div>
 		`);
 
 	});
