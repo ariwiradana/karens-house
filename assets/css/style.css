@@ -845,6 +845,10 @@ section .pages {
     margin-right: 2rem;
 }
 
+.room-facility-item:last-child{
+    margin-right: 0;
+}
+
 .room-facility {
     font-size: 15px;
     letter-spacing: 1px;
@@ -1322,6 +1326,29 @@ footer h5 {
     .map-location-item {
         padding: 1rem 1.5rem !important;
     }
+
+    /* rooms */
+    .container-md{
+        padding: 2rem;
+    }
+
+    .room-content .page-title {
+        font-size: 28px;
+    }
+
+    .room-content .page-title::after {
+        margin-bottom: 1.5rem;
+        width: 32px;
+    }
+
+    .room-content .page-desc {
+        width: 100%;
+    }
+
+    .room-facility{
+        font-size: 13px;
+    }
+
 }
 
 @media only screen and (max-width: 1200px) {
@@ -1672,5 +1699,9 @@ footer h5 {
 
     .map-location-item {
         padding: 1rem 1.5rem !important;
+    }
+
+    .container-md{
+        padding: 2rem;
     }
 }
