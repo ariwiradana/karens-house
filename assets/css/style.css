@@ -921,24 +921,25 @@ section .pages {
 
 .other-room-img-content {
     margin-top: 3rem;
-
 }
 
 .other-room-img-content .item {
     background-size: cover;
     overflow: hidden;
     transition: .8s ease;
+    position: relative;
+    height: 50vh;
 }
 
-/* .other-room-img-content .item::after {
+.other-room-img-content .item::before {
     content: "";
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
-} */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 1));
+}
 
 .other-room-img-content .item img {
     object-fit: cover;
@@ -952,7 +953,46 @@ section .pages {
     transition: .8s ease;
 }
 
+.other-room-overlay {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 1.5rem;
+}
 
+.other-room-overlay .overlay-title {
+    font-size: 22px;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 1px;
+    z-index: 9999;
+    margin-bottom: 0;
+    text-align: left;
+}
+
+.other-room-overlay .overlay-title::after {
+    content: '';
+    display: block;
+    width: 1.5rem;
+    margin: .8rem 0rem;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.5);
+}
+
+.other-room-overlay .overlay-desc {
+    color: white;
+    letter-spacing: 1px;
+}
+
+.other-room-overlay .explore {
+    color: white;
+    letter-spacing: 1px;
+    text-align: right;
+    margin-bottom: 0;
+    margin-top: 3rem;
+    margin-right: 1rem;
+}
 
 
 footer {
@@ -1058,6 +1098,10 @@ footer h5 {
         padding: 1rem;
         background-color: var(--primary);
         cursor: pointer;
+        font-size: 13px;
+        text-transform: uppercase;
+        color: var(--primary-light);
+        letter-spacing: 1px;
     }
 
     .nav-white-mobile-content .nav-white-mobile-item .nav-white-book a {
@@ -1216,7 +1260,6 @@ footer h5 {
     }
 
     /* index */
-
     .carousel-title-container {
         bottom: 0;
         right: 0;
@@ -1370,10 +1413,21 @@ footer h5 {
         padding: .8rem;
     }
 
-    .scroll-down-content i{
+    .scroll-down-content i {
         font-size: 13px;
     }
 
+    .other-room-overlay .overlay-title {
+        font-size: 18px;
+    }
+
+    .other-room-overlay .overlay-desc {
+        margin-bottom: 0;
+    }
+
+    .other-room-overlay .explore {
+        margin-top: 1.5rem;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
@@ -1455,6 +1509,9 @@ footer h5 {
         padding: 1rem;
         background-color: var(--primary);
         cursor: pointer;
+        text-transform: uppercase;
+        color: white;
+        letter-spacing: 1px;
     }
 
     .nav-white-mobile-content .nav-white-mobile-item .nav-white-book span {
@@ -1760,7 +1817,19 @@ footer h5 {
         min-width: 28%;
     }
 
-    .scroll-down-content i{
+    .scroll-down-content i {
         font-size: 13px;
+    }
+
+    .other-room-overlay .overlay-title {
+        font-size: 18px;
+    }
+
+    .other-room-overlay .overlay-desc {
+        margin-bottom: 0;
+    }
+
+    .other-room-overlay .explore {
+        margin-top: 1.5rem;
     }
 }

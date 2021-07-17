@@ -13,8 +13,8 @@ function loadFoto() {
 			if (response.status_code == 200) {
 				$.each(response.data, function (i, data) {
 					$('.gallery-content').append(`
-					<a href="https://api-karens-house.000webhostapp.com/foto/gallery/${data.nama}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
-						<div class="gallery-item">
+					<div class="gallery-item">
+						<a href="https://api-karens-house.000webhostapp.com/foto/gallery/${data.nama}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
 							<div class="gallery-overlay"></div>
 							<img class="gallery-img" src="https://api-karens-house.000webhostapp.com/foto/gallery/${data.nama}">
 							<div class="gallery-overlay-container">
@@ -22,8 +22,8 @@ function loadFoto() {
 									<i class="fi-rr-expand"></i>
 								</div>
 							</div>
-						</div>
-					</a>
+						</a>
+					</div>
 					`);
 				});
 				stopLoading();
