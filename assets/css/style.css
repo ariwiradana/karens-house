@@ -851,10 +851,21 @@ section .pages {
 
 .room-facility-content {
     display: flex;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .room-facility-item {
-    margin-right: 2rem;
+    flex: 1;
+    min-width: 30%;
+}
+
+.room-facility-item:nth-child(1){
+    margin-left: 0;
+}
+
+.room-facility-item:last-child{
+    margin-right: 0;
 }
 
 .room-facility-item:last-child {
@@ -928,17 +939,7 @@ section .pages {
     overflow: hidden;
     transition: .8s ease;
     position: relative;
-    height: 55vh;
-}
-
-.other-room-img-content .item::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
+    height: 80vh;
 }
 
 .other-room-img-content .item img {
@@ -954,21 +955,27 @@ section .pages {
 }
 
 .other-room-overlay {
-    position: absolute;
     bottom: 0;
+    position: absolute;
     right: 0;
+    height: 100%;
     width: 100%;
     box-sizing: border-box;
-    padding: 1.5rem;
+    padding: 2rem;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, .9));
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
 }
 
 .other-room-overlay .overlay-title {
-    font-size: 22px;
-    font-weight: 600;
+    font-size: 28px;
+    width: 90%;
     color: white;
-    letter-spacing: 1px;
+    line-height: 2.2rem !important;
+    font-family: "Crismon", serif;
     z-index: 9999;
-    margin-bottom: 0;
+    bottom: 0;
     text-align: left;
 }
 
@@ -985,12 +992,13 @@ section .pages {
 }
 
 .other-room-overlay .explore {
-    color: white;
+    color: var(--primary-light);
     letter-spacing: 1px;
     text-align: right;
     margin-bottom: 0;
-    margin-top: 3rem;
+    font-size: 11px;
     margin-right: 1rem;
+    text-transform: uppercase;
 }
 
 

@@ -32,7 +32,17 @@ function read_room_type() {
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
+
+					$('#room-img').append(`
+						<div class="room-img-item">
+							<a href="https://source.unsplash.com/random?sig=${i + 1}" data-fancybox="gallery" data-aos="fade-up"
+								data-aos-duration="1000">
+								<img class="room-img" src="https://source.unsplash.com/random?sig=${i + 1}">
+							</a>
+						</div>
+					`)
 				});
+
 			}
 		}
 	});
@@ -44,7 +54,7 @@ function read_other_room() {
 		smartSpeed: 500,
 		autoplay: true,
 		autoplaySpeed: 500,
-		margin: 5,
+		margin: 40,
 		nav: false,
 		dots: false,
 		responsive: {
