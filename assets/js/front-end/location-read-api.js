@@ -1,6 +1,3 @@
-$(document).ready(function () {})
-
-
 const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData&map_ids=8d193001f940fde3";
 $.getScript(gmaps, function () {});
 

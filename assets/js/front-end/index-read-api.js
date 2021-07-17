@@ -4,6 +4,7 @@ $(document).ready(function () {
     // dummyImg();
 });
 
+
 function roomType() {
     let owl = $('#index-room-type').owlCarousel({
         loop: true,
@@ -29,11 +30,11 @@ function roomType() {
                 $.each(data, function (i, item) {
                     owl.trigger('add.owl.carousel',
                         [jQuery(
-                            `<div class="item room-type-content">
+                            `<div class="item index-room-type-content">
                                 <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
-                                <div class="room-type-text-content">
+                                <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
-                                    <h4 class="room-type-title">${item.title}</h4>
+                                    <h4 class="index-room-type-title">${item.title}</h4>
 
                                     <div class="main-facilities-content">
                                         <div class="main-facilities-item">
@@ -46,7 +47,7 @@ function roomType() {
                                         </div>
                                     </div>
 
-                                    <p class="room-type-desc">${item.desc.length > 100 ? item.desc.substring(0, 100) + '...' : item.desc}</p>
+                                    <p class="index-room-type-desc">${item.desc.length > 100 ? item.desc.substring(0, 100) + '...' : item.desc}</p>
                                     <a href="rooms/?type=${item.id}">
                                         <p class="explore"><small>Explore <span>&#10230;</span></small></p>
                                     </a>
@@ -134,3 +135,42 @@ function dummyImg() {
         stopLoading();
     }, 4000);
 }
+
+// const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData";
+// $.getScript(gmaps, function () {});
+
+// function mapData() {
+//     const karenslocation = {
+//         lat: -8.44819898282695,
+//         lng: 115.25355074537637
+//     };
+
+//     const map = new google.maps.Map(document.querySelector(".index-map"), {
+//         center: karenslocation,
+//         zoom: 11,
+//     });
+
+//     const marker = new google.maps.Marker({
+//         position: karenslocation,
+//         map,
+//         label: {
+//             text: "K",
+//             color: "white"
+//         },
+//         title: "Karens House"
+//     });
+
+//     let infoWindow = new google.maps.InfoWindow();
+
+//     marker.addListener("click", () => {
+//         infoWindow.close();
+//         infoWindow.setContent(marker.getTitle());
+//         infoWindow.open(marker.getMap(), marker);
+//         map.setCenter(karenslocation);
+//         map.setZoom(14);
+
+//         setTimeout(function () {
+//             map.panTo(marker.getPosition());
+//         }, 1000);
+//     });
+// }

@@ -376,28 +376,33 @@ section .pages {
 
 .container-sm {
     box-sizing: border-box;
-    z-index: 99999;
+    padding: 0;
 }
 
-.intro-content {
+.container-md {
+    box-sizing: border-box;
+    padding: 100px 150px;
+}
+
+.index-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
 }
 
-.intro-item:nth-child(1) {
+.index-item:nth-child(1) {
     box-sizing: border-box;
     padding: 100px;
 }
 
-.intro-item:nth-child(2) {
+.index-item:nth-child(2) {
     flex: 60%;
     background-color: var(--primary-light);
     box-sizing: border-box;
     padding: 130px;
 }
 
-.intro-content .intro-small {
+.index-content .index-small {
     font-size: 11px;
     letter-spacing: 2px;
     text-transform: uppercase;
@@ -406,12 +411,12 @@ section .pages {
     font-weight: 300;
 }
 
-.intro-content .page-title {
+.index-content .page-title {
     font-family: "Crismon", serif;
     color: var(--text-dark);
 }
 
-.intro-content .page-title::after {
+.index-content .page-title::after {
     width: 42px;
     display: block;
     content: '';
@@ -419,13 +424,13 @@ section .pages {
     margin: 1.5rem 0rem;
 }
 
-.intro-content .intro-desc {
+.index-content .index-desc {
     letter-spacing: 1px;
     width: 70%;
     color: white;
 }
 
-.intro-content .intro-desc::after {
+.index-content .index-desc::after {
     width: 42px;
     display: block;
     content: '';
@@ -433,20 +438,21 @@ section .pages {
     margin: 1.2rem 0rem;
 }
 
-.intro-sosmed {
+.index-sosmed {
     display: flex;
 }
 
-.intro-sosmed a {
+.index-sosmed a {
     padding: 0px 10px;
     font-size: 14px;
 }
 
-.intro-sosmed a:nth-child(1) {
+.index-sosmed a:nth-child(1) {
     padding-left: 0;
 }
 
-.room-type-content {
+/* index-room-type */
+.index-room-type-content {
     display: flex;
     background-size: cover;
     overflow: hidden;
@@ -455,14 +461,14 @@ section .pages {
     margin: 1rem;
 }
 
-.room-type-text-content .room-type-title {
+.index-room-type-text-content .index-room-type-title {
     letter-spacing: 1px;
     color: var(--text-dark);
     font-weight: 400;
     font-family: 'Crismon', serif;
 }
 
-.room-type-text-content .room-type-title::after {
+.index-room-type-text-content .index-room-type-title::after {
     content: '';
     display: block;
     border-top: solid 1px rgba(0, 0, 0, 0.3);
@@ -470,12 +476,12 @@ section .pages {
     margin: 1rem 0rem;
 }
 
-.room-type-text-content .room-type-desc {
+.index-room-type-text-content .index-room-type-desc {
     letter-spacing: 1px;
     color: var(--text-secondary);
 }
 
-.room-type-text-content .explore {
+.index-room-type-text-content .explore {
     margin-top: 2rem;
     font-size: 14px;
     letter-spacing: 2px;
@@ -487,25 +493,25 @@ section .pages {
     transition: .3s ease;
 }
 
-.room-type-text-content .explore span {
+.index-room-type-text-content .explore span {
     transition: .5s ease;
 }
 
 
-.room-type-text-content .explore:hover span {
+.index-room-type-text-content .explore:hover span {
     margin-left: .5rem;
     transition: .5s ease;
 }
 
-.room-type-content img {
-    flex: 70%;
-    height: 80vh;
+.index-room-type-content img {
+    flex: 65%;
+    height: 70vh;
     object-fit: cover;
     transition: .5s ease;
 }
 
-.room-type-text-content {
-    flex: 30%;
+.index-room-type-text-content {
+    flex: 35%;
     box-sizing: border-box;
     padding: 0rem 4rem;
 }
@@ -784,6 +790,166 @@ section .pages {
     z-index: 1;
 }
 
+/* rooms */
+#carousel-room-img .carousel-item img {
+    width: 100%;
+    height: 70vh;
+    object-fit: cover;
+}
+
+#carousel-room .scroll-down-content {
+    animation: scroll-down-anim-room 1s ease-in-out infinite !important;
+}
+
+.room-content .page-small {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-weight: 300;
+}
+
+.room-content .page-title {
+    font-family: "Crismon", serif;
+    color: var(--text-dark);
+}
+
+.room-content .page-title::after {
+    width: 42px;
+    display: block;
+    content: '';
+    border-top: 1px solid rgba(0, 0, 0, 0.3);
+    margin: 1.5rem 0rem;
+}
+
+.room-content .page-desc {
+    letter-spacing: 1px;
+    width: 100%;
+    color: var(--text-secondary);
+}
+
+.room-content .page-desc::after {
+    width: 42px;
+    display: block;
+    content: '';
+    border-top: 1px solid rgba(255, 255, 255, 0.8);
+    margin: 1.2rem 0rem;
+}
+
+.room-facility-content {
+    display: flex;
+}
+
+.room-facility-item {
+    margin-right: 2rem;
+}
+
+.room-facility {
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-left: .3rem;
+    margin-top: 1px;
+    color: var(--text-dark);
+}
+
+.room-img-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room-img-item {
+    position: relative;
+    height: 35vh;
+    flex-grow: 1;
+    background-size: cover;
+    overflow: hidden;
+    margin: 3px;
+    cursor: pointer;
+}
+
+.room-img-item:last-child {
+    flex-grow: 10;
+}
+
+.room-img {
+    max-height: 100%;
+    min-width: 100%;
+    object-fit: cover;
+    vertical-align: bottom;
+    transition: .8s ease;
+}
+
+.room-img:hover{
+    transform: scale(1.05);
+    transition:  .8s ease;
+}
+
+.features {
+    margin-top: 3rem;
+}
+
+.room-features-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.room-features-item {
+    box-sizing: border-box;
+    padding: 1rem;
+    background: whitesmoke;
+    flex: 1;
+    min-width: 20%;
+    margin: 4px;
+}
+
+.other-room-img-content {
+    margin-top: 3rem;
+
+}
+
+.other-room-img-content .item {
+    background-size: cover;
+    overflow: hidden;
+    transition: .8s ease;
+}
+
+/* .other-room-img-content .item::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.9));
+} */
+
+.other-room-img-content .item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    transition: .8s ease;
+}
+
+.other-room-img-content .item img:hover {
+    transform: scale(1.05);
+    transition: .8s ease;
+}
+
+@keyframes scroll-down-anim-room {
+
+    0%,
+    100% {
+        margin-bottom: .5rem;
+    }
+
+    50% {
+        margin-bottom: 1rem;
+    }
+}
+
+
+
 footer {
     box-sizing: border-box;
     padding: 3rem;
@@ -803,7 +969,7 @@ footer h5 {
     display: flex;
 }
 
-.marker-gmaps{
+.marker-gmaps {
     background-color: white;
     color: white;
 }
@@ -1072,41 +1238,41 @@ footer h5 {
         margin-left: 1rem;
     }
 
-    .intro-content {
+    .index-content {
         flex-direction: column;
     }
 
-    .intro-item:nth-child(1) {
+    .index-item:nth-child(1) {
         padding: 2rem;
     }
 
-    .intro-item:nth-child(2) {
+    .index-item:nth-child(2) {
         padding: 2rem;
     }
 
-    .intro-content .page-title {
+    .index-content .page-title {
         font-size: 28px;
     }
 
-    .intro-content .page-title::after {
+    .index-content .page-title::after {
         margin-bottom: 0;
         width: 32px;
     }
 
-    .intro-content .intro-desc {
+    .index-content .index-desc {
         width: 100%;
     }
 
-    .room-type-content {
+    .index-room-type-content {
         flex-direction: column;
     }
 
-    .room-type-text-content {
+    .index-room-type-text-content {
         padding: 0rem 2rem
     }
 
-    .room-type-content img {
-        max-height: 40vh !important;
+    .index-room-type-content img {
+        height: 30vh !important;
     }
 
     /* gallery */
@@ -1423,41 +1589,41 @@ footer h5 {
         margin-left: 1rem;
     }
 
-    .intro-content {
+    .index-content {
         flex-direction: column;
     }
 
-    .intro-item:nth-child(1) {
+    .index-item:nth-child(1) {
         padding: 2rem;
     }
 
-    .intro-item:nth-child(2) {
+    .index-item:nth-child(2) {
         padding: 2rem;
     }
 
-    .intro-content .page-title {
+    .index-content .page-title {
         font-size: 28px;
     }
 
-    .intro-content .page-title::after {
+    .index-content .page-title::after {
         margin-bottom: 0;
         width: 32px;
     }
 
-    .intro-content .intro-desc {
+    .index-content .index-desc {
         width: 100%;
     }
 
-    .room-type-content {
+    .index-room-type-content {
         flex-direction: column;
     }
 
-    .room-type-text-content {
+    .index-room-type-text-content {
         padding: 0rem 2rem
     }
 
-    .room-type-content img {
-        max-height: 50vh;
+    .index-room-type-content img {
+        height: 40vh;
     }
 
     /* gallery */

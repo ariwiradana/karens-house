@@ -20,7 +20,7 @@ function loadFoto() {
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>
-								</div
+								</div>
 							</div>
 						</div>
 					</a>

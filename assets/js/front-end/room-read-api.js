@@ -1,5 +1,5 @@
 $(document).ready(function () {
-	read_room_type();
+	// read_room_type();
 	read_other_room();
 });
 
@@ -41,8 +41,9 @@ function read_room_type() {
 	});
 }
 
+
 function read_other_room() {
-	var owl = $('#other-room-type').owlCarousel({
+	$('#other-room').owlCarousel({
 		loop: true,
 		smartSpeed: 500,
 		autoplay: true,
@@ -62,33 +63,33 @@ function read_other_room() {
 			}
 		}
 	});
-	$.ajax({
-		url: 'https://api-karens-house.000webhostapp.com/read-room-type.php',
-		type: 'get',
-		dataType: 'json',
-		success: function (response) {
-			if (response.status_code == 200) {
-				const data = response.data;
+	// $.ajax({
+	// 	url: 'https://api-karens-house.000webhostapp.com/read-room-type.php',
+	// 	type: 'get',
+	// 	dataType: 'json',
+	// 	success: function (response) {
+	// 		if (response.status_code == 200) {
+	// 			const data = response.data;
 
-				$.each(data, function (i, item) {
-					owl.trigger('add.owl.carousel',
-						[jQuery(
-							`<div class="item">
-                                <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}"/>
-                                <a href="rooms/?type=${item.id}">
-                                    <div class="index-room-type-overlay">
-                                        <h6 class="index-room-type-title mb-2">${item.title}</h6>
-                                        <p class="index-room-type-desc">${item.desc}</p>
-                                        <div class="d-flex justify-content-end">
-                                            <span class="index-room-type-details">More Details <i class="fas fa-arrow-right text-light"></i></span>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>`
-						)]);
-				});
-				owl.trigger('refresh.owl.carousel');
-			}
-		}
-	});
+	// 			$.each(data, function (i, item) {
+	// 				owl.trigger('add.owl.carousel',
+	// 					[jQuery(
+	// 						`<div class="item">
+    //                             <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}"/>
+    //                             <a href="rooms/?type=${item.id}">
+    //                                 <div class="index-room-type-overlay">
+    //                                     <h6 class="index-room-type-title mb-2">${item.title}</h6>
+    //                                     <p class="index-room-type-desc">${item.desc}</p>
+    //                                     <div class="d-flex justify-content-end">
+    //                                         <span class="index-room-type-details">More Details <i class="fas fa-arrow-right text-light"></i></span>
+    //                                     </div>
+    //                                 </div>
+    //                             </a>
+    //                         </div>`
+	// 					)]);
+	// 			});
+	// 			owl.trigger('refresh.owl.carousel');
+	// 		}
+	// 	}
+	// });
 }
