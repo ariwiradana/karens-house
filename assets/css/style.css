@@ -845,7 +845,7 @@ section .pages {
     margin-right: 2rem;
 }
 
-.room-facility-item:last-child{
+.room-facility-item:last-child {
     margin-right: 0;
 }
 
@@ -884,9 +884,9 @@ section .pages {
     transition: .8s ease;
 }
 
-.room-img:hover{
+.room-img:hover {
     transform: scale(1.05);
-    transition:  .8s ease;
+    transition: .8s ease;
 }
 
 .features {
@@ -1328,8 +1328,13 @@ footer h5 {
     }
 
     /* rooms */
-    .container-md{
+    .container-md {
         padding: 2rem;
+    }
+
+    /* rooms */
+    #carousel-room-img .carousel-item img {
+        height: 40vh;
     }
 
     .room-content .page-title {
@@ -1345,9 +1350,11 @@ footer h5 {
         width: 100%;
     }
 
-    .room-facility{
+    .room-facility {
         font-size: 13px;
     }
+
+
 
 }
 
@@ -1701,7 +1708,29 @@ footer h5 {
         padding: 1rem 1.5rem !important;
     }
 
-    .container-md{
+    /* rooms */
+    .container-md {
         padding: 2rem;
+    }
+
+    #carousel-room-img .carousel-item img {
+        height: 40vh;
+    }
+
+    .room-content .page-title {
+        font-size: 28px;
+    }
+
+    .room-content .page-title::after {
+        margin-bottom: 1.5rem;
+        width: 32px;
+    }
+
+    .room-content .page-desc {
+        width: 100%;
+    }
+
+    .room-facility {
+        font-size: 13px;
     }
 }
