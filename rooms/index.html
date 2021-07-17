@@ -26,7 +26,7 @@
 
 <body>
 
-    <!-- <div class="loading-container animate__animated"></div> -->
+    <div class="loading-container animate__animated"></div>
     <div class="custom-alert"></div>
 
     <nav>
@@ -163,11 +163,11 @@
                     </div>
                     <div class="sidenav-dropdown-container">
                         <div class="sidenav-dropdown-content">
-                            <a href="./rooms/?type=1">Family Room</a>
+                            <a href="../rooms/?type=1">Family Room</a>
                             <hr>
-                            <a href="./rooms/?type=2">Double Room Terrace View</a>
+                            <a href="../rooms/?type=2">Double Room Terrace View</a>
                             <hr>
-                            <a href="./rooms/?type=3">Double Room Mountain View</a>
+                            <a href="../rooms/?type=3">Double Room Mountain View</a>
                         </div>
                     </div>
                     <div class="sidenav-mobile-item">
@@ -202,28 +202,35 @@
         <div class="carousel-inner w-100">
             <div data-aos="zoom-out" data-aos-duration="2000" id="carousel-room-img">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="https://picsum.photos/1920/1080?1">
+                    <img class="d-block w-100" id="thumbnail">
+                </div>
+            </div>
+
+            <div class="scroll-down-container">
+                <div class="scroll-down-content">
+                    <a href="#about">
+                        <i class="fi-rr-angle-down text-light"></i>
+                    </a>
                 </div>
             </div>
         </div>
+
+
 
         <div class="container-md bg-white mb-3">
             <div class="room-content">
                 <div data-aos="fade-up">
                     <p class="page-small mb-2">Room Type</p>
-                    <h2 class="page-title">Family Room with Terrace & Mountain View</h2>
+                    <h2 class="page-title" id="title"></h2>
                     <div class="room-facility-content">
                         <div class="room-facility-item">
-                            <i class="fas fa-bed"></i> <span class="room-facility">1 king bed</span>
+                            <i class="fas fa-bed"></i> <span class="room-facility" id="bed"></span>
                         </div>
                         <div class="room-facility-item">
-                            <i class="fas fa-bath"></i> <span class="room-facility">2 shower & 1 bathtub</span>
+                            <i class="fas fa-bath"></i> <span class="room-facility" id="room_size"></span>
                         </div>
                     </div>
-                    <p class="page-desc mt-3 mb-0">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa odit
-                        expedita
-                        facere
-                        pariatur ad cupiditate veritatis nemo eos! Aut, suscipit?</p>
+                    <p class="page-desc mt-3 mb-0" id="desc"></p>
                 </div>
 
                 <div class="room-img-content" data-aos="fade-up">
@@ -254,15 +261,10 @@
                 </div>
             </div>
             <div class="room-content features" data-aos="fade-up">
-                <p class="page-small mb-2">Room Features</p>
+                <p class="page-small mb-2" id="features-title"></p>
                 <h2 class="page-title">Room Features</h2>
-                <div class="room-features-content">
-                    <div class="room-features-item">
-                        <i class="fas fa-bath"></i> <span class="room-facility">2 shower & 1 bathtub</span>
-                    </div>
-                    <div class="room-features-item">
-                        <i class="fas fa-bath"></i> <span class="room-facility">2 shower & 1 bathtub</span>
-                    </div>
+                <div class="room-features-content" id="facilities">
+
                 </div>
             </div>
         </div>
@@ -283,14 +285,6 @@
                         <img src="https://picsum.photos/300/300?8" alt="">
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="scroll-down-container">
-            <div class="scroll-down-content">
-                <a href="#about">
-                    <i class="fi-rr-angle-down text-light"></i>
-                </a>
             </div>
         </div>
     </div>

@@ -801,6 +801,18 @@ section .pages {
     animation: scroll-down-anim-room 1s ease-in-out infinite !important;
 }
 
+@keyframes scroll-down-anim-room {
+
+    0%,
+    100% {
+        margin-bottom: .8rem;
+    }
+
+    50% {
+        margin-bottom: 1.5rem;
+    }
+}
+
 .room-content .page-small {
     font-size: 11px;
     letter-spacing: 2px;
@@ -940,17 +952,6 @@ section .pages {
     transition: .8s ease;
 }
 
-@keyframes scroll-down-anim-room {
-
-    0%,
-    100% {
-        margin-bottom: .5rem;
-    }
-
-    50% {
-        margin-bottom: 1rem;
-    }
-}
 
 
 
@@ -1329,12 +1330,16 @@ footer h5 {
 
     /* rooms */
     .container-md {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     /* rooms */
     #carousel-room-img .carousel-item img {
         height: 40vh;
+    }
+
+    .room-img-item {
+        height: 20vh !important;
     }
 
     .room-content .page-title {
@@ -1348,17 +1353,30 @@ footer h5 {
 
     .room-content .page-desc {
         width: 100%;
+        text-align: justify;
     }
 
     .room-facility {
+        font-size: 12px;
+        letter-spacing: 0px;
+    }
+
+    .room-features-item i {
         font-size: 13px;
     }
 
+    .room-features-item {
+        min-width: 40%;
+        padding: .8rem;
+    }
 
+    .scroll-down-content i{
+        font-size: 13px;
+    }
 
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
 
     .carousel-control-next,
     .carousel-control-prev {
@@ -1730,7 +1748,19 @@ footer h5 {
         width: 100%;
     }
 
+    .room-img-item {
+        height: 40vh;
+    }
+
     .room-facility {
+        font-size: 13px;
+    }
+
+    .room-features-item {
+        min-width: 28%;
+    }
+
+    .scroll-down-content i{
         font-size: 13px;
     }
 }
