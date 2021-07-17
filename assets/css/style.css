@@ -755,6 +755,7 @@ section .pages {
     box-sizing: border-box;
     padding: 1.5rem;
     width: 100%;
+    z-index: 100;
 }
 
 .alert-header {
@@ -764,7 +765,7 @@ section .pages {
 }
 
 .alert-header-title {
-    color: var(--text-secondary);
+    color: var(--text-secondary) !important;
     font-size: 11px;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -775,6 +776,11 @@ section .pages {
     font-size: 18px;
     letter-spacing: 1px;
     font-family: "Crismon", serif;
+    color: var(--text-dark) !important;
+}
+
+.alert-close {
+    cursor: pointer;
 }
 
 footer {

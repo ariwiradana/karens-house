@@ -18,6 +18,8 @@
     width: 100%;
     z-index: 999999;
     display: block;
+    height: 100vh;
+    background-color: var(--primary-dark);
 }
 
 .loading-content {

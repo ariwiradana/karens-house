@@ -40,7 +40,6 @@ function mapData() {
 					infoWindow.open(marker.getMap(), marker);
 				});
 
-
 				$.each(response.data, function (i, data) {
 					let infoWindow = new google.maps.InfoWindow();
 					let pos = new google.maps.LatLng(data.lat, data.lon);
@@ -64,6 +63,13 @@ function mapData() {
 							<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
 						</div>
 					`)
+				});
+
+				$('.map-location-item').click(function () {
+					$('body').css("overflow", "hidden");
+					const header = "Visit Place";
+					const location = $(this).find('.location-name').text();
+					customAlert(header, location);
 				});
 
 			}
@@ -143,6 +149,13 @@ function mapData() {
 								<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
 							</div>
 						`);
+					});
+
+					$('.map-location-item').click(function () {
+						$('body').css("overflow", "hidden");
+						const header = "Visit Place";
+						const location = $(this).find('.location-name').text();
+						customAlert(header, location);
 					});
 				}
 			}
