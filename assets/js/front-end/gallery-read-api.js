@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	// loadFoto();
-	dummyImg();
+	loadFoto();
+	// dummyImg();
 });
 
 function loadFoto() {
@@ -14,9 +14,9 @@ function loadFoto() {
 				$.each(response.data, function (i, data) {
 					$('.gallery-content').append(`
 					<div class="gallery-item">
-						<a href="https://api-karens-house.000webhostapp.com/foto/gallery/${data.nama}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="800">
+						<a href="https://api-karens-house.000webhostapp.com/${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="800">
 							<div class="gallery-overlay"></div>
-							<img class="gallery-img" src="https://api-karens-house.000webhostapp.com/foto/gallery/${data.nama}">
+							<img class="gallery-img" src="https://api-karens-house.000webhostapp.com/${data}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>

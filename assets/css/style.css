@@ -906,7 +906,7 @@ section .pages {
 }
 
 .room-img-item:last-child {
-    flex-grow: 10;
+    flex-grow: 5;
 }
 
 .room-img {
@@ -1362,7 +1362,7 @@ footer h5 {
     }
 
     .gallery-item {
-        height: 25vh !important;
+        height: 19vh;
     }
 
     /* location */

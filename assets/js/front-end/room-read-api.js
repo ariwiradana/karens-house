@@ -1,12 +1,13 @@
 $(document).ready(function () {
 	read_room_type();
 	read_other_room();
-	dummyImg();
+	// dummyImg();
 });
 
 function read_room_type() {
 	startLoading();
 	let id = window.location.href.split('=')[1];
+	console.log(id)
 
 	$.ajax({
 		url: `https://api-karens-house.000webhostapp.com/read-room-type.php?id=${id}`,
@@ -29,12 +30,41 @@ function read_room_type() {
 
 				$.each(facilities, function (i, item) {
 					$('#facilities').append(`
-						<div class="room-features-item" data-aos="zoom-out" data-aos-duration="800">
+						<div class="room-features-item" data-aos="fade-up" data-aos-duration="800">
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
 				});
 
+			}
+		}
+	});
+
+	$.ajax({
+		url: "https://api-karens-house.000webhostapp.com/read-room-img.php",
+		type: 'get',
+		dataType: 'json',
+		success: function (response) {
+			if (response.status_code == 200) {
+				let data = ''
+
+				if (id == 1) {
+					data = response.data.family;
+				} else if (id == 2) {
+					data = response.data.mountain;
+				} else {
+					data = response.data.terrace;
+				}
+
+				$.each(data, function (i, item) {
+					$('#room-img').append(`
+						<div class="room-img-item" data-aos="fade-up" data-aos-duration="800">
+							<a href="https://api-karens-house.000webhostapp.com/${item}" data-fancybox="gallery">
+								<img class="room-img" src="https://api-karens-house.000webhostapp.com/${item}">
+							</a>
+						</div>
+					`)
+				});
 			}
 		}
 	});
@@ -47,13 +77,11 @@ function dummyImg() {
 
 	$.each(data, function (i, data) {
 		$('#room-img').append(`
-
 		<div class="room-img-item" data-aos="fade-up" data-aos-duration="800">
 			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery">
 				<img class="room-img" src="https://source.unsplash.com/random?sig=${data + 10}">
 			</a>
 		</div>
-
 	`)
 
 	});
@@ -105,7 +133,7 @@ function read_other_room() {
 										<p class="explore"><small>Explore <span class="icon-explore">&#10230;</span></small></p>
 									</a>
 								</div>
-								<img src="https://source.unsplash.com/random?sig=${i}">
+								<img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
 							</div>
 							`)]);
 				});

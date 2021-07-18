@@ -279,7 +279,7 @@
         <footer data-aos="fade-up" data-aos-duration="800">
             <h5>Follow Us</h5>
             <div class="footer-content">
-
+                <div id="fileNames"></div>
             </div>
         </footer>
     </section>
@@ -301,6 +301,14 @@
     <script src="assets/js/custom/custom-alert.js"></script>
     <script src="assets/js/front-end/index-read-api.js"></script>
     <script src="assets/js/custom/booking.js"></script>
+    <script type="text/javascript">
+        const testFolder = 'assets/icon/';
+        const fs = require('fs');
+
+        fs.readdirSync(testFolder).forEach(file => {
+            console.log(file);
+        });
+    </script>
 </body>
 
 </html>
