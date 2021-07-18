@@ -564,7 +564,7 @@ section .pages {
 .gallery-header {
     margin-top: 4rem;
     box-sizing: border-box;
-    padding: 25vh 0vh;
+    padding-top: 25vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -581,7 +581,14 @@ section .pages {
 
 .gallery-header hr {
     flex: 4;
-    border-top: 1px solid rgba(0, 0, 0, .199);
+    border-top: .5px solid rgba(0, 0, 0, .06);
+}
+
+.nav-gallery{
+    box-sizing: border-box;
+    padding-right: 1.2rem;
+    margin-left: 56vh;
+    margin-bottom: 10vh;
 }
 
 .gallery-content {
@@ -591,7 +598,7 @@ section .pages {
 
 .gallery-item {
     position: relative;
-    height: 50vh;
+    height: 40vh;
     flex-grow: 1;
     background-size: cover;
     overflow: hidden;
@@ -1349,16 +1356,31 @@ footer h5 {
 
     .gallery-header {
         margin-top: 3.5rem;
-        padding: 10vh 0vh !important;
+        padding-top: 10vh;
     }
 
     .gallery-header .gallery-title {
-        padding-left: 5vh;
+        padding-left: 3vh;
         font-size: 36px;
     }
 
     .gallery-header hr {
         flex: 1.5;
+    }
+
+    .nav-gallery{
+        margin-left: 0;
+        padding: 3vh;
+        margin-bottom: 0 !important;
+    }
+
+    .nav-pills .nav-link{
+        margin: 0;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-gallery .nav-item{
+        margin-bottom: 1rem;
     }
 
     .gallery-item {
@@ -1782,7 +1804,7 @@ footer h5 {
 
     .gallery-header {
         margin-top: 3.5rem;
-        padding: 20vh 0vh;
+        padding-top: 10vh;
     }
 
     .gallery-header .gallery-title {
@@ -1791,11 +1813,26 @@ footer h5 {
     }
 
     .gallery-header hr {
-        flex: 1.5;
+        flex: 3;
     }
 
     .gallery-item {
         height: 40vh;
+    }
+
+    .nav-gallery{
+        margin-left: 0;
+        padding: 5vh;
+        margin-bottom: 0 !important;
+    }
+
+    .nav-pills .nav-link{
+        margin: 0;
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    .nav-gallery .nav-item{
+        margin-bottom: 1rem;
     }
 
     /* location */
