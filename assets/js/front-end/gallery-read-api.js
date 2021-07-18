@@ -19,6 +19,12 @@ function loadGallery() {
 function ajaxLoad(id) {
 	startLoading();
 
+	$(window).scroll(function () {
+		if ($(window).scrollTop() == $(document).height() - $(window).height()) {
+			// ajax call get data from server and append to the div
+		}
+	});
+
 	$.ajax({
 		url: 'https://api-karens-house.000webhostapp.com/read-gallery-img.php',
 		type: 'get',
@@ -30,13 +36,13 @@ function ajaxLoad(id) {
 					data = response.data.all;
 				} else if (id == "front") {
 					data = response.data.front;
-				} else if(id == 'bedroom'){
+				} else if (id == 'bedroom') {
 					data = response.data.bedroom;
-				} else if(id == 'living-room'){
+				} else if (id == 'living-room') {
 					data = response.data.livingroom;
-				} else if(id == 'bathroom'){
+				} else if (id == 'bathroom') {
 					data = response.data.bathroom;
-				} else{
+				} else {
 					data = response.data.terrace;
 				}
 
