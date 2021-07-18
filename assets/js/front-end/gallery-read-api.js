@@ -15,9 +15,7 @@ function loadGallery() {
 }
 
 
-
 function ajaxLoad(id) {
-	$('.img-loading').show();
 	startLoading();
 	$.ajax({
 		url: 'https://api-karens-house.000webhostapp.com/read-gallery-img.php',
@@ -45,12 +43,7 @@ function ajaxLoad(id) {
 					<div class="gallery-item">
 						<a href="https://api-karens-house.000webhostapp.com/${data}" data-fancybox="gallery">
 							<div class="gallery-overlay"></div>
-							<div class="img-loading">
-								<div class="img-loading-content">
-									<div class="loading-icon"></div>
-								</div>
-							</div>
-							<img class="gallery-img" src="https://api-karens-house.000webhostapp.com/${data}">
+							<img class="gallery-img" data-src="https://api-karens-house.000webhostapp.com/${data}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>
@@ -59,7 +52,11 @@ function ajaxLoad(id) {
 						</a>
 					</div>
 					`);
-					imgLoading();
+
+					$('.gallery-img').lazy({
+						effect: "fadeIn"
+					});
+
 				});
 				stopLoading();
 			}
@@ -68,7 +65,7 @@ function ajaxLoad(id) {
 }
 
 function dummyImg() {
-	const N = 10;
+	const N = 50;
 	const data = Array.from(Array(N + 1).keys()).slice(1);
 	startLoading()
 
@@ -87,7 +84,9 @@ function dummyImg() {
 			</div>
 		`);
 
-		imgLoading();
+		$('.gallery-img').lazy({
+			effect: "fadeIn"
+		});
 
 	});
 

@@ -1,16 +1,8 @@
-$(document).ready(function () {
-    $(function () {
-        $('.lazy').Lazy({
-            beforeLoad: function (element) {
-                $('.img-loading').html(`
-                    <div class="img-loading-content">
-                        <div class="loading-icon"></div>
-                    </div>
-                `);
-            },
-            afterLoad: function (element) {
-                imgLoading();
-            },
-        });
+$(function () {
+    $('.lazy').Lazy({
+        beforeLoad: function (element) {
+            var imageSrc = element.data('src');
+            console.log('image "' + imageSrc + '" is about to be loaded');
+        },
     });
-})
+});

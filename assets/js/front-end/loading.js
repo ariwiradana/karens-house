@@ -28,11 +28,3 @@ function stopLoading() {
     $('.loading-container').addClass("animate__slideOutUp");
     $('body').css("overflow", "visible");
 }
-
-function imgLoading() {
-    $("img").on('load', function () {
-        setTimeout(function () {
-            $('.img-loading').fadeOut();
-        }, 3000);
-    });
-}

@@ -51,6 +51,10 @@ section .pages {
     width: 100%;
     height: 100vh;
     object-fit: cover;
+    background-image: url('../icon/loading.gif');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 50%;
 }
 
 .carousel-item>img {
@@ -517,6 +521,10 @@ section .pages {
 .index-room-type-content .img-content img {
     object-fit: cover;
     transition: .8s ease;
+    background-image: url('../icon/loading.gif');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 50%;
 }
 
 .index-room-type-content .img-content img:hover {
@@ -649,6 +657,10 @@ section .pages {
     object-fit: cover;
     vertical-align: bottom;
     transition: .8s ease;
+    background-image: url('../icon/loading.gif');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 50%;
 }
 
 .gallery-overlay-container {
@@ -847,6 +859,7 @@ section .pages {
     width: 100%;
     height: 70vh;
     object-fit: cover;
+    
 }
 
 #carousel-room .scroll-down-content {
@@ -943,6 +956,7 @@ section .pages {
     margin: 3px;
     cursor: pointer;
     transition: .8s ease;
+    
 }
 
 .room-img-item:last-child {
@@ -955,6 +969,10 @@ section .pages {
     object-fit: cover;
     vertical-align: bottom;
     transition: .8s ease;
+    background-image: url('../icon/loading.gif');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 50%;
 }
 
 .room-img:hover {
@@ -997,6 +1015,10 @@ section .pages {
     width: 100%;
     height: 100%;
     transition: .8s ease;
+    background-image: url('../icon/loading.gif');
+    background-repeat: no-repeat;
+    background-size: 40px;
+    background-position: 50% 50%;
 }
 
 .other-room-img-content .item img:hover {
