@@ -629,7 +629,7 @@ section .pages {
 }
 
 .gallery-item:last-child {
-    flex-grow: 5;
+    flex-grow: 1;
 }
 
 .gallery-item .gallery-overlay {
