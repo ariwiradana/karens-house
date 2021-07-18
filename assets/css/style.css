@@ -54,7 +54,7 @@ section .pages {
     background-image: url('../icon/loading.gif');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
+    background-position: left center;
 }
 
 .carousel-item>img {
@@ -524,7 +524,7 @@ section .pages {
     background-image: url('../icon/loading.gif');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
+    background-position: left center;
 }
 
 .index-room-type-content .img-content img:hover {
@@ -660,7 +660,7 @@ section .pages {
     background-image: url('../icon/loading.gif');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
+    background-position: left center;
 }
 
 .gallery-overlay-container {
@@ -972,7 +972,7 @@ section .pages {
     background-image: url('../icon/loading.gif');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
+    background-position: left center;
 }
 
 .room-img:hover {
@@ -1018,7 +1018,7 @@ section .pages {
     background-image: url('../icon/loading.gif');
     background-repeat: no-repeat;
     background-size: 40px;
-    background-position: center;
+    background-position: left center;
 }
 
 .other-room-img-content .item img:hover {
