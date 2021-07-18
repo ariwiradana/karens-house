@@ -18,13 +18,6 @@ function loadGallery() {
 
 function ajaxLoad(id) {
 	startLoading();
-
-	$(window).scroll(function () {
-		if ($(window).scrollTop() == $(document).height() - $(window).height()) {
-			// ajax call get data from server and append to the div
-		}
-	});
-
 	$.ajax({
 		url: 'https://api-karens-house.000webhostapp.com/read-gallery-img.php',
 		type: 'get',
