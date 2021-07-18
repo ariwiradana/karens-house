@@ -44,6 +44,11 @@ function ajaxLoad(id) {
 					<div class="gallery-item">
 						<a href="https://api-karens-house.000webhostapp.com/${data}" data-fancybox="gallery">
 							<div class="gallery-overlay"></div>
+							<div class="img-loading">
+								<div class="img-loading-content">
+									<div class="loading-icon"></div>
+								</div>
+							</div>
 							<img class="gallery-img" loading="lazy" src="https://api-karens-house.000webhostapp.com/${data}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
@@ -54,6 +59,11 @@ function ajaxLoad(id) {
 					</div>
 					`);
 				});
+
+				$("img").on('load', function () {
+					$('.img-loading').fadeOut();
+				});
+
 				stopLoading();
 			}
 		}
@@ -70,6 +80,11 @@ function dummyImg() {
 			<div class="gallery-item">
 				<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
 					<div class="gallery-overlay"></div>
+					<div class="img-loading">
+						<div class="img-loading-content">
+							<div class="loading-icon"></div>
+						</div>
+					</div>
 					<img class="gallery-img" loading="lazy" src="https://source.unsplash.com/random?sig=${data}">
 					<div class="gallery-overlay-container">
 						<div class ="gallery-overlay-content fadeIn-bottom">
@@ -79,6 +94,10 @@ function dummyImg() {
 				</a>
 			</div>
 		`);
+
+		$("img").on('load', function () {
+			$('.img-loading').fadeOut();
+		});
 
 	});
 

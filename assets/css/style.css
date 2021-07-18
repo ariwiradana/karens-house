@@ -24,6 +24,8 @@ body {
     height: 100%;
 }
 
+
+
 .bg-whitesmoke {
     background-color: #F0f0f0;
 }
@@ -459,6 +461,7 @@ section .pages {
     align-items: center;
     background-color: white;
     margin: 1rem;
+    position: relative;
 }
 
 .index-room-type-text-content .index-room-type-title {
@@ -503,11 +506,22 @@ section .pages {
     transition: .5s ease;
 }
 
-.index-room-type-content img {
+.index-room-type-content .img-content {
     flex: 65%;
     height: 70vh;
+    position: relative;
+    transition: .8s ease;
+    overflow: hidden;
+}
+
+.index-room-type-content .img-content img {
     object-fit: cover;
-    transition: .5s ease;
+    transition: .8s ease;
+}
+
+.index-room-type-content .img-content img:hover {
+    transform: scale(1.015);
+    transition: .8s ease;
 }
 
 .index-room-type-text-content {
@@ -584,7 +598,7 @@ section .pages {
     border-top: .5px solid rgba(0, 0, 0, .06);
 }
 
-.nav-gallery{
+.nav-gallery {
     box-sizing: border-box;
     padding-right: 1.2rem;
     margin-left: 56vh;
@@ -607,7 +621,7 @@ section .pages {
 }
 
 .gallery-item:last-child {
-    flex-grow: 10;
+    flex-grow: 5;
 }
 
 .gallery-item .gallery-overlay {
@@ -665,7 +679,7 @@ section .pages {
     color: white;
 }
 
-.gallery-loading-container{
+.gallery-loading-container {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -674,7 +688,7 @@ section .pages {
     z-index: 9999;
 }
 
-.gallery-loading{
+.gallery-loading {
     background-color: whitesmoke;
     width: 100%;
     height: 100%;
@@ -1387,18 +1401,18 @@ footer h5 {
         flex: 1.5;
     }
 
-    .nav-gallery{
+    .nav-gallery {
         margin-left: 0;
         padding: 3vh;
         margin-bottom: 0 !important;
     }
 
-    .nav-pills .nav-link{
+    .nav-pills .nav-link {
         margin: 0;
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .nav-gallery .nav-item{
+    .nav-gallery .nav-item {
         margin-bottom: 1rem;
     }
 
@@ -1463,7 +1477,7 @@ footer h5 {
         text-align: justify;
     }
 
-    .room-facility-item{
+    .room-facility-item {
         flex: 33%;
         margin: 0;
         display: flex;
@@ -1815,7 +1829,7 @@ footer h5 {
     }
 
     .index-room-type-content img {
-        height: 40vh;
+        height: 50vh;
         flex: 1;
     }
 
@@ -1839,18 +1853,18 @@ footer h5 {
         height: 40vh;
     }
 
-    .nav-gallery{
+    .nav-gallery {
         margin-left: 0;
         padding: 5vh;
         margin-bottom: 0 !important;
     }
 
-    .nav-pills .nav-link{
+    .nav-pills .nav-link {
         margin: 0;
         border: 1px solid rgba(0, 0, 0, 0.05);
     }
 
-    .nav-gallery .nav-item{
+    .nav-gallery .nav-item {
         margin-bottom: 1rem;
     }
 
@@ -1909,7 +1923,7 @@ footer h5 {
         height: 45vh;
     }
 
-    .room-facility-item{
+    .room-facility-item {
         flex: 33%;
         margin: 0;
         display: flex;

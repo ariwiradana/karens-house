@@ -31,7 +31,14 @@ function roomType() {
                     owl.trigger('add.owl.carousel',
                         [jQuery(
                             `<div class="item index-room-type-content">
-                                <img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+                                <div class="img-content">
+                                    <div class="img-loading">
+                                        <div class="img-loading-content">
+                                            <div class="loading-icon"></div>
+                                        </div>
+                                    </div>
+                                    <img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+                                </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
                                     <h4 class="index-room-type-title">${item.title}</h4>
@@ -55,6 +62,7 @@ function roomType() {
                             </div>`
                         )]);
                 });
+                imgLoading();
                 owl.trigger('refresh.owl.carousel');
             }
         }
@@ -86,16 +94,20 @@ function readCarousel() {
 
                     $('#carousel-img').append(`
                         <div class="${itemClass}">
+                            <div class="img-loading">
+                                <div class="img-loading-content">
+                                    <div class="loading-icon"></div>
+                                </div>
+                            </div>
                             <img class="d-block w-100" loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/carousel/${item.nama}">
                         </div>
                     `);
 
                     $('#carousel-indicator').append(`
                         <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
-                `);
-
+                    `);
                 });
-
+                imgLoading();
                 stopLoading()
             }
         }
@@ -122,6 +134,11 @@ function dummyImg() {
 
         $('#carousel-img').append(`
                 <div class="${itemClass}">
+                    <div class="img-loading">
+                        <div class="img-loading-content">
+                            <div class="loading-icon"></div>
+                        </div>
+                    </div>
                     <img class="d-block w-100" loading="lazy" src="https://picsum.photos/1920/1080?${item}">
                 </div>
         `);
@@ -131,6 +148,9 @@ function dummyImg() {
         `);
 
     });
+
+    imgLoading();
+
     setInterval(function () {
         stopLoading();
     }, 4000);

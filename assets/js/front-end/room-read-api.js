@@ -36,6 +36,7 @@ function read_room_type() {
 					`);
 				});
 
+				imgLoading();
 			}
 		}
 	});
@@ -59,12 +60,20 @@ function read_room_type() {
 				$.each(data, function (i, item) {
 					$('#room-img').append(`
 						<div class="room-img-item">
+							<div class="img-loading">
+								<div class="img-loading-content">
+									<div class="loading-icon"></div>
+								</div>
+							</div>
 							<a href="https://api-karens-house.000webhostapp.com/${item}" data-fancybox="gallery">
 								<img class="room-img" loading="lazy" src="https://api-karens-house.000webhostapp.com/${item}">
 							</a>
 						</div>
 					`)
 				});
+
+				imgLoading();
+
 			}
 		}
 	});
@@ -78,13 +87,19 @@ function dummyImg() {
 	$.each(data, function (i, data) {
 		$('#room-img').append(`
 		<div class="room-img-item">
+			<div class="img-loading">
+				<div class="img-loading-content">
+					<div class="loading-icon"></div>
+				</div>
+			</div>
 			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery">
 				<img class="room-img" loading="lazy" src="https://source.unsplash.com/random?sig=${data + 10}">
 			</a>
 		</div>
-	`)
-
+		`);
 	});
+
+	imgLoading();
 
 	setInterval(function () {
 		stopLoading();
@@ -133,11 +148,17 @@ function read_other_room() {
 										<p class="explore"><small>Explore <span class="icon-explore">&#10230;</span></small></p>
 									</a>
 								</div>
+								<div class="img-loading">
+									<div class="img-loading-content">
+										<div class="loading-icon"></div>
+									</div>
+								</div>
 								<img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
 							</div>
 							`)]);
 				});
 				owl.trigger('refresh.owl.carousel');
+				imgLoading();
 			}
 		}
 	});
