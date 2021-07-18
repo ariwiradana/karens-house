@@ -17,6 +17,7 @@ function loadGallery() {
 
 
 function ajaxLoad(id) {
+	$('.img-loading').show();
 	startLoading();
 	$.ajax({
 		url: 'https://api-karens-house.000webhostapp.com/read-gallery-img.php',
@@ -49,7 +50,7 @@ function ajaxLoad(id) {
 									<div class="loading-icon"></div>
 								</div>
 							</div>
-							<img class="gallery-img lazy" data-src="https://api-karens-house.000webhostapp.com/${data}">
+							<img class="gallery-img" src="https://api-karens-house.000webhostapp.com/${data}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>
@@ -58,6 +59,7 @@ function ajaxLoad(id) {
 						</a>
 					</div>
 					`);
+					imgLoading();
 				});
 				stopLoading();
 			}
@@ -71,15 +73,10 @@ function dummyImg() {
 	startLoading()
 
 	$.each(data, function (i, data) {
-		$('.gallery-content').append(`
+		$('#img').append(`
 			<div class="gallery-item">
 				<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
 					<div class="gallery-overlay"></div>
-					<div class="img-loading">
-						<div class="img-loading-content">
-							<div class="loading-icon"></div>
-						</div>
-					</div>
 					<img class="gallery-img" loading="lazy" src="https://source.unsplash.com/random?sig=${data}">
 					<div class="gallery-overlay-container">
 						<div class ="gallery-overlay-content fadeIn-bottom">
@@ -90,6 +87,7 @@ function dummyImg() {
 			</div>
 		`);
 
+		imgLoading();
 
 	});
 

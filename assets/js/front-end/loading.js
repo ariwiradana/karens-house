@@ -33,6 +33,6 @@ function imgLoading() {
     $("img").on('load', function () {
         setTimeout(function () {
             $('.img-loading').fadeOut();
-        }, 2000);
+        }, 3000);
     });
 }
