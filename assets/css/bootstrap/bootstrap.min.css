@@ -35,6 +35,8 @@
     --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
 *,
 ::after,
 ::before {
@@ -42,7 +44,7 @@
 }
 
 html {
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
     line-height: 1.15;
     -webkit-text-size-adjust: 100%;
     -ms-text-size-adjust: 100%;

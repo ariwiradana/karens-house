@@ -702,6 +702,7 @@ section .pages {
 .map-item .map-location-item {
     display: flex;
     align-items: center;
+    justify-content: space-between;
 }
 
 .map-item .map-location-item:hover {
@@ -709,9 +710,20 @@ section .pages {
     background-color: whitesmoke;
 }
 
+.map-item .map-location-item .location-name {
+    font-family: "Crismon", serif;
+    font-size: 14px;
+    color: var(--text-dark);
+}
+
 .map-item .map-location-item i {
     margin-left: 8px;
     font-size: 16px;
+    color: var(--primary-light);
+}
+
+.map-item .map-location-item .fa-chevron-right {
+    font-size: 11px;
     color: var(--primary-light);
 }
 
@@ -1329,7 +1341,8 @@ footer h5 {
     }
 
     .index-room-type-content img {
-        height: 30vh !important;
+        flex: 1;
+        height: 30vh;
     }
 
     /* gallery */
@@ -1355,6 +1368,7 @@ footer h5 {
     /* location */
     .map-container {
         flex-direction: column-reverse;
+        margin-top: 3.5rem;
     }
 
     .map-item:nth-child(2) {
@@ -1761,6 +1775,7 @@ footer h5 {
 
     .index-room-type-content img {
         height: 40vh;
+        flex: 1;
     }
 
     /* gallery */
@@ -1786,6 +1801,7 @@ footer h5 {
     /* location */
     .map-container {
         flex-direction: column-reverse;
+        margin-top: 3.8rem;
     }
 
     .map-item:nth-child(2) {

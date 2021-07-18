@@ -77,8 +77,11 @@ function mapData() {
 
 					$(`#location-all-tab`).append(`
 						<div class="map-location-item">
-							<span>${i + 1}. <span class="location-name">${data.location_name}</span></span>
-							<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
+							<div>
+								<span>${i + 1}. <span class="location-name">${data.location_name}</span></span>
+								<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
+							</div>
+							<i class="fas fa-chevron-right"></i>
 						</div>
 					`);
 
@@ -182,8 +185,11 @@ function mapData() {
 					$.each(response.data, function (i, data) {
 						$(`#location-${id}`).append(`
 							<div class="map-location-item">
-								<span>${i + 1}. <span class="location-name">${data.location_name}</span></span>
-								<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
+								<div>
+									<span>${i + 1}. <span class="location-name">${data.location_name}</span></span>
+									<i class="ml-2 fas ${data.jenis == 'food' ? 'fa-utensils' : data.jenis == 'temple' ? 'fa-gopuram' : 'fa-camera'}"></i>
+								</div>
+								<i class="fas fa-chevron-right"></i>
 							</div>
 						`);
 					});

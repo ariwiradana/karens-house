@@ -29,7 +29,7 @@ function read_room_type() {
 
 				$.each(facilities, function (i, item) {
 					$('#facilities').append(`
-						<div class="room-features-item">
+						<div class="room-features-item" data-aos="zoom-out" data-aos-duration="800">
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
@@ -48,8 +48,8 @@ function dummyImg() {
 	$.each(data, function (i, data) {
 		$('#room-img').append(`
 
-		<div class="room-img-item">
-			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="1000">
+		<div class="room-img-item" data-aos="fade-up" data-aos-duration="800">
+			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery">
 				<img class="room-img" src="https://source.unsplash.com/random?sig=${data + 10}">
 			</a>
 		</div>
