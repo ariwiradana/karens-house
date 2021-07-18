@@ -60,7 +60,7 @@ function read_room_type() {
 					$('#room-img').append(`
 						<div class="room-img-item">
 							<a href="https://api-karens-house.000webhostapp.com/${item}" data-fancybox="gallery">
-								<img class="room-img" src="https://api-karens-house.000webhostapp.com/${item}">
+								<img class="room-img" loading="lazy" src="https://api-karens-house.000webhostapp.com/${item}">
 							</a>
 						</div>
 					`)
@@ -79,7 +79,7 @@ function dummyImg() {
 		$('#room-img').append(`
 		<div class="room-img-item">
 			<a href="https://source.unsplash.com/random?sig=${data + 10}" data-fancybox="gallery">
-				<img class="room-img" src="https://source.unsplash.com/random?sig=${data + 10}">
+				<img class="room-img" loading="lazy" src="https://source.unsplash.com/random?sig=${data + 10}">
 			</a>
 		</div>
 	`)
@@ -133,7 +133,7 @@ function read_other_room() {
 										<p class="explore"><small>Explore <span class="icon-explore">&#10230;</span></small></p>
 									</a>
 								</div>
-								<img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+								<img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
 							</div>
 							`)]);
 				});

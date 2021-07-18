@@ -31,7 +31,7 @@ function roomType() {
                     owl.trigger('add.owl.carousel',
                         [jQuery(
                             `<div class="item index-room-type-content">
-                                <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+                                <img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
                                     <h4 class="index-room-type-title">${item.title}</h4>
@@ -86,7 +86,7 @@ function readCarousel() {
 
                     $('#carousel-img').append(`
                         <div class="${itemClass}">
-                            <img class="d-block w-100" src="https://api-karens-house.000webhostapp.com/foto/carousel/${item.nama}">
+                            <img class="d-block w-100" loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/carousel/${item.nama}">
                         </div>
                     `);
 
@@ -122,7 +122,7 @@ function dummyImg() {
 
         $('#carousel-img').append(`
                 <div class="${itemClass}">
-                    <img class="d-block w-100" src="https://picsum.photos/1920/1080?${item}">
+                    <img class="d-block w-100" loading="lazy" src="https://picsum.photos/1920/1080?${item}">
                 </div>
         `);
 
