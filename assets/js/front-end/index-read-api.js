@@ -144,8 +144,6 @@ function dummyImg() {
                 </div>
         `);
 
-        imgLoading();
-
         $('#carousel-indicator').append(`
                 <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
         `);

@@ -49,7 +49,7 @@ function ajaxLoad(id) {
 									<div class="loading-icon"></div>
 								</div>
 							</div>
-							<img class="gallery-img" loading="lazy" src="https://api-karens-house.000webhostapp.com/${data}">
+							<img class="gallery-img lazy" data-src="https://api-karens-house.000webhostapp.com/${data}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>
@@ -58,9 +58,7 @@ function ajaxLoad(id) {
 						</a>
 					</div>
 					`);
-					imgLoading();
 				});
-
 				stopLoading();
 			}
 		}
@@ -92,7 +90,7 @@ function dummyImg() {
 			</div>
 		`);
 
-		imgLoading();
+
 	});
 
 	setInterval(function () {

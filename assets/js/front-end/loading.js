@@ -31,6 +31,8 @@ function stopLoading() {
 
 function imgLoading() {
     $("img").on('load', function () {
-        $('.img-loading').fadeOut();
+        setTimeout(function () {
+            $('.img-loading').fadeOut();
+        }, 2000);
     });
 }
