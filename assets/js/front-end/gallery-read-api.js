@@ -58,10 +58,7 @@ function ajaxLoad(id) {
 						</a>
 					</div>
 					`);
-				});
-
-				$("img").on('load', function () {
-					$('.img-loading').fadeOut();
+					imgLoading();
 				});
 
 				stopLoading();
@@ -95,10 +92,7 @@ function dummyImg() {
 			</div>
 		`);
 
-		$("img").on('load', function () {
-			$('.img-loading').fadeOut();
-		});
-
+		imgLoading();
 	});
 
 	setInterval(function () {

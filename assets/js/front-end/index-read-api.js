@@ -61,8 +61,8 @@ function roomType() {
                                 </div>
                             </div>`
                         )]);
+                        imgLoading();
                 });
-                imgLoading();
                 owl.trigger('refresh.owl.carousel');
             }
         }
@@ -103,11 +103,12 @@ function readCarousel() {
                         </div>
                     `);
 
+                    imgLoading();
+
                     $('#carousel-indicator').append(`
                         <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
                     `);
                 });
-                imgLoading();
                 stopLoading()
             }
         }
@@ -143,14 +144,13 @@ function dummyImg() {
                 </div>
         `);
 
+        imgLoading();
+
         $('#carousel-indicator').append(`
                 <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
         `);
 
     });
-
-    imgLoading();
-
     setInterval(function () {
         stopLoading();
     }, 4000);

@@ -63,6 +63,7 @@
     animation-delay: -0.16s;
 }
 
+
 @-webkit-keyframes sk-bouncedelay {
 
     0%,
@@ -170,5 +171,17 @@
     100% {
         -webkit-transform: rotate(360deg);
         transform: rotate(360deg);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .loading-content img {
+        height: 9vh;
+    }
+}
+
+@media only screen and (min-width: 600px) and (max-width: 1200px) {
+    .loading-content img {
+        height: 18vh;
     }
 }

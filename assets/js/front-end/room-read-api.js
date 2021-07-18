@@ -34,9 +34,9 @@ function read_room_type() {
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
-				});
 
-				imgLoading();
+					imgLoading();
+				});
 			}
 		}
 	});
@@ -70,10 +70,8 @@ function read_room_type() {
 							</a>
 						</div>
 					`)
+					imgLoading();
 				});
-
-				imgLoading();
-
 			}
 		}
 	});
@@ -97,10 +95,8 @@ function dummyImg() {
 			</a>
 		</div>
 		`);
+		imgLoading();
 	});
-
-	imgLoading();
-
 	setInterval(function () {
 		stopLoading();
 	}, 2000)
@@ -156,9 +152,9 @@ function read_other_room() {
 								<img loading="lazy" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
 							</div>
 							`)]);
+					imgLoading();
 				});
 				owl.trigger('refresh.owl.carousel');
-				imgLoading();
 			}
 		}
 	});
