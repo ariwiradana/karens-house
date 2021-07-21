@@ -1,8 +1,13 @@
-$(function () {
+function lazyLoad() {
     $('.lazy').Lazy({
-        beforeLoad: function (element) {
-            var imageSrc = element.data('src');
-            console.log('image "' + imageSrc + '" is about to be loaded');
+        effect: "fadeIn",
+        effectTime: 1000,
+        onError: function () {
+            $('.loading-gif-content').fadeOut();
         },
+
+        onFinishedAll: function () {
+            $('.loading-gif-content').fadeOut();
+        }
     });
-});
+}
