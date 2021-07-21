@@ -2,7 +2,6 @@ $(document).ready(function () {
 	loadGallery();
 });
 
-
 function loadGallery() {
 	const id = "all";
 	ajaxLoad(id);
@@ -16,7 +15,7 @@ function loadGallery() {
 
 
 function ajaxLoad(id) {
-	startLoading();
+	startLoading()
 	let url = "";
 	if (id == "all") {
 		url = `https://api-karens-house.000webhostapp.com/read-images.php`;
@@ -45,8 +44,9 @@ function ajaxLoad(id) {
 					</div>
 					`);
 				});
+
 				lazyLoad();
-				stopLoading();
+				stopLoading()
 			}
 		}
 	});
