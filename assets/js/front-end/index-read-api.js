@@ -59,6 +59,9 @@ function roomType() {
                 });
                 owl.trigger('refresh.owl.carousel');
             }
+        },
+        error: function () {
+            roomType();
         }
     });
 }
@@ -103,6 +106,9 @@ function readCarousel() {
                 });
                 stopLoading()
             }
+        },
+        error: function () {
+            readCarousel();
         }
     });
 }

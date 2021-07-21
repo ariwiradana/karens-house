@@ -95,6 +95,9 @@ function mapData() {
 				});
 
 			}
+		},
+		error: function () {
+			mapData();
 		}
 	})
 
@@ -201,6 +204,9 @@ function mapData() {
 						customAlert(header, location);
 					});
 				}
+			},
+			error: function () {
+				mapData();
 			}
 		})
 	});

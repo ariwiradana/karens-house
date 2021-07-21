@@ -62,6 +62,9 @@ function ajaxLoad(id) {
 				lazyLoad();
 				stopLoading()
 			}
+		},
+		error: function () {
+			ajaxLoad();
 		}
 	});
 }

@@ -35,6 +35,9 @@ function read_room_type() {
 					`);
 				});
 			}
+		},
+		error: function () {
+			read_room_type();
 		}
 	});
 
@@ -69,6 +72,9 @@ function read_room_type() {
 					});
 				});
 			}
+		},
+		error: function () {
+			read_room_type();
 		}
 	});
 }
@@ -144,6 +150,9 @@ function read_other_room() {
 				});
 				owl.trigger('refresh.owl.carousel');
 			}
+		},
+		error: function () {
+			read_other_room();
 		}
 	});
 }
