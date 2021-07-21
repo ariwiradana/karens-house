@@ -7,7 +7,6 @@ $(document).ready(function () {
 function read_room_type() {
 	startLoading();
 	let id = window.location.href.split('=')[1];
-	console.log(id)
 
 	$.ajax({
 		url: `https://api-karens-house.000webhostapp.com/read-room-type.php?id=${id}`,
@@ -30,7 +29,7 @@ function read_room_type() {
 
 				$.each(facilities, function (i, item) {
 					$('#facilities').append(`
-						<div class="room-features-item" data-aos="fade-up" data-aos-duration="400">
+						<div class="room-features-item">
 							<i class="fas ${item.facility_icon}"></i> <span class="room-facility">${item.facility_title}</span>
 						</div>
 					`);
@@ -59,13 +58,14 @@ function read_room_type() {
 					$('#room-img').append(`
 						<div class="room-img-item">
 							<a href="https://api-karens-house.000webhostapp.com/${item}" data-fancybox="gallery">
-								<img class="room-img" data-src="https://api-karens-house.000webhostapp.com/${item}">
+								<img class="room-img" src="https://api-karens-house.000webhostapp.com/${item}">
 							</a>
 						</div>
 					`);
 
 					$('.room-img').lazy({
-						effect: "fadeIn"
+						effect: "fadeIn",
+						effectTIme: 1000
 					});
 				});
 			}
@@ -138,13 +138,9 @@ function read_other_room() {
 										<p class="explore"><small>Explore <span class="icon-explore">&#10230;</span></small></p>
 									</a>
 								</div>
-								<img class="other-img" data-src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+								<img class="other-img" src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
 							</div>
 							`)]);
-
-					$('.other-img').lazy({
-						effect: "fadeIn"
-					});
 				});
 				owl.trigger('refresh.owl.carousel');
 			}

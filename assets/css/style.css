@@ -794,18 +794,30 @@ section .pages {
 }
 
 .loading-gif {
-    position: fixed;
-    bottom: 0;
     transition: .4s ease;
     width: 100%;
 }
 
-.loading-gif-content{
+.loading-gif-content {
     display: flex;
     background-color: rgba(255, 255, 255, 1);
     box-sizing: border-box;
     padding: 1rem;
     justify-content: center;
+}
+
+.progress {
+    border-radius: 0;
+    height: 2px;
+    background-color: whitesmoke;
+}
+
+.progress-bar {
+    background-color: var(--primary-light);
+}
+
+.loading-border {
+    border-top: 3px solid var(--primary-light);
 }
 
 
@@ -830,10 +842,44 @@ section .pages {
     z-index: 100;
 }
 
+.alert-body {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.alert-link-content{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.04);
+}
+
+.alert-link-content:last-child{
+    border-bottom: none;
+}
+
+.btn-alert-book {
+    background-color: var(--primary-light);
+    color: white;
+    transition: .4s ease;
+    font-size: 12px;
+    padding: .4rem 1rem;
+}
+
+.btn-alert-book:focus,
+.btn-alert-book:hover {
+    background-color: var(--primary-light-hover);
+    border-color: var(--primary-light-hover);
+    transition: .4s ease;
+}
+
 .alert-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: .5rem;
 }
 
 .alert-header-title {
@@ -849,6 +895,12 @@ section .pages {
     letter-spacing: 1px;
     font-family: "Crismon", serif;
     color: var(--text-dark) !important;
+    margin-bottom: 0;
+}
+
+.book-link{
+    width: 100%;
+    padding: .7rem 0rem;
 }
 
 .alert-close {
@@ -1097,10 +1149,6 @@ footer h5 {
 }
 
 @media only screen and (max-width: 600px) {
-
-    .loading-gif-container .loading-gif {
-        width: 20px;
-    }
 
     .carousel-control-next,
     .carousel-control-prev {
@@ -1408,7 +1456,7 @@ footer h5 {
     /* gallery */
 
     .gallery-header {
-        margin-top: 3.5rem;
+        margin-top: 3.4rem;
         padding-top: 10vh;
     }
 
@@ -1484,7 +1532,7 @@ footer h5 {
     }
 
     .room-img-item {
-        height: 20vh !important;
+        height: 16vh;
     }
 
     .room-content .page-title {
@@ -1552,10 +1600,6 @@ footer h5 {
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
-
-    .loading-gif-container .loading-gif {
-        width: 20px;
-    }
 
     .carousel-control-next,
     .carousel-control-prev {

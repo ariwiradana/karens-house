@@ -10,8 +10,8 @@ function roomType() {
         loop: true,
         autoplay: true,
         autoplayTimeout: 5000,
-        autoplaySpeed: 2000,
-        smartSpeed: 2000,
+        autoplaySpeed: 1000,
+        smartSpeed: 1000,
         autoplayHoverPause: true,
         margin: 5,
         nav: false,
@@ -32,7 +32,7 @@ function roomType() {
                         [jQuery(
                             `<div class="item index-room-type-content">
                                 <div class="img-content">
-                                    <img class="lazy" data-src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+                                    <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
                                 </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
@@ -56,9 +56,6 @@ function roomType() {
                                 </div>
                             </div>`
                         )]);
-                    $('.lazy').lazy({
-                        effect: "fadeIn"
-                    });
                 });
                 owl.trigger('refresh.owl.carousel');
             }
@@ -96,7 +93,8 @@ function readCarousel() {
                     `);
 
                     $('.img-cars').lazy({
-                        effect: "fadeIn"
+                        effect: "fadeIn",
+                        effectTime: 1000
                     });
 
                     $('#carousel-indicator').append(`

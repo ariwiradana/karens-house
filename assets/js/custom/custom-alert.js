@@ -16,9 +16,12 @@ function customAlert(header, title) {
                     <h6 class="alert-header-title">${header}</h6>
                     <i class="fi-rr-cross alert-close"></i>
                 </div>
-                <a href="https://maps.google.com/?q=${title}" target="_blank">
+                <div class="alert-body">
                     <h6 class="alert-location">${title}</h6>
-                </a>
+                    <a href="https://maps.google.com/?q=${title}" target="_blank">
+                        <button class="ml-3 btn btn-alert-book">Visit</button>
+                    </a>
+                </div>
             </div>
         </div>
     `);
@@ -28,7 +31,7 @@ function customAlert(header, title) {
     });
 }
 
-function customAlertBooking(header, title) {
+function customAlertBooking(header, data) {
     $('.custom-alert').html(`
         <div class="alert-container animate__animated animate__fadeIn">
             <div class="alert-content animate__animated animate__slideInUp">
@@ -36,10 +39,23 @@ function customAlertBooking(header, title) {
                     <h6 class="alert-header-title">${header}</h6>
                     <i class="fi-rr-cross alert-close"></i>
                 </div>
-                <h6 class="alert-location">${title}</h6>
+                <div id="booking-via">
+                
+                </div>
             </div>
         </div>
     `);
+
+    $.each(data, function (i, item) {
+        $('#booking-via').append(`
+            <div class="alert-link-content">
+                <h6 class="alert-location book-link">${item[0]}</h6>
+                <a href="${item[1]}" target="_blank">
+                    <button class="ml-3 btn btn-alert-book">Book</button>
+                </a>
+            </div>
+        `)
+    })
 
     $('.alert-close, .alert-container').click(function () {
         closeAlert();

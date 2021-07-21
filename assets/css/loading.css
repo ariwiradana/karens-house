@@ -32,7 +32,7 @@
 }
 
 .loading-content img {
-    height: 90px;
+    width: 50vh;
 }
 
 .loader {
@@ -176,12 +176,12 @@
 
 @media only screen and (max-width: 600px) {
     .loading-content img {
-        height: 9vh;
+        width: 40vh;
     }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
     .loading-content img {
-        height: 18vh;
+        width: 75vh;
     }
 }
