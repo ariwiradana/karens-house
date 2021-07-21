@@ -17,33 +17,27 @@ function loadGallery() {
 
 function ajaxLoad(id) {
 	startLoading();
+
+	let url = "";
+	if (id == "all") {
+		url = `https://api-karens-house.000webhostapp.com/read-images.php`;
+	} else {
+		url = `https://api-karens-house.000webhostapp.com/read-images.php?jenis=${id}`;
+	}
+
 	$.ajax({
-		url: 'https://api-karens-house.000webhostapp.com/read-gallery-img.php',
+		url: url,
 		type: 'get',
 		dataType: 'json',
 		success: function (response) {
 			if (response.status_code == 200) {
-				let data = "";
-				if (id == "all") {
-					data = response.data.all;
-				} else if (id == "front") {
-					data = response.data.front;
-				} else if (id == 'bedroom') {
-					data = response.data.bedroom;
-				} else if (id == 'living-room') {
-					data = response.data.livingroom;
-				} else if (id == 'bathroom') {
-					data = response.data.bathroom;
-				} else {
-					data = response.data.terrace;
-				}
-
-				$.each(data, function (i, data) {
+				console.log(response.data)
+				$.each(response.data, function (i, obj) {
 					$(`#gallery-${id}`).append(`
 					<div class="gallery-item">
-						<a href="https://api-karens-house.000webhostapp.com/${data}" data-fancybox="gallery">
+						<a href="https://api-karens-house.000webhostapp.com/uploads/gallery/${obj.filename}" data-fancybox="gallery">
 							<div class="gallery-overlay"></div>
-							<img class="gallery-img" data-src="https://api-karens-house.000webhostapp.com/${data}">
+							<img class="gallery-img" data-src="https://api-karens-house.000webhostapp.com/uploads/gallery/${obj.filename}" alt="${obj.jenis}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
 									<i class="fi-rr-expand"></i>
