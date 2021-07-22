@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    // readCarousel();
+    readCarousel();
     roomType();
-    dummyImg();
+    // dummyImg();
 });
 
 
@@ -35,7 +35,7 @@ function roomType() {
                         [jQuery(
                             `<div class="item index-room-type-content">
                                 <div class="img-content">
-                                    <img src="${dummy}${i + 5}">
+                                    <img src="${img}${item.thumbnail}">
                                 </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
@@ -107,6 +107,7 @@ function readCarousel() {
                         <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
                     `);
                 });
+
                 stopLoading()
             }
         },

@@ -93,14 +93,16 @@ function ajaxLoad(id, start, limit) {
 
 function dummyImg() {
 	const id = "all";
-	randomImage(id, 4);
+	randomImage(id, 0, 8);
 
 	$('.nav-gallery .nav-item').click(function () {
 		let id = $(this).find('.nav-link').attr('href').split('#')[1];
 
 		let child = $(`#gallery-${id}`).children().length;
 
-		child == 0 ? randomImage(id, 4) : child;
+		if (child == 0) {
+			randomImage(id, 0, 8)
+		}
 
 	});
 
@@ -109,8 +111,10 @@ function dummyImg() {
 		let id = $('.nav-gallery .nav-item').find('.active').attr('href').split('#')[1];
 
 		let child = $(`#gallery-${id}`).children().length;
+		let from = child + 1;
+		let until = from + 4;
 
-		randomImage(id, 4);
+		randomImage(id, from, until);
 
 		setTimeout(function () {
 			$('.btn-load-more').html("load more");
@@ -118,16 +122,20 @@ function dummyImg() {
 	});
 }
 
-function randomImage(id, N) {
-	const data = Array.from(Array(N + 1).keys()).slice(1);
+function randomImage(id, from, until) {
+	let data = [];
+	for (var i = from; i <= until; i++) {
+		data.push(i);
+	}
+
 	startLoading()
 
 	$.each(data, function (i, data) {
 		$(`#gallery-${id == 'living-room' ? 'livingroom' : id}`).append(`
 			<div class="gallery-item">
-				<a href="https://source.unsplash.com/random?${id}&sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
+				<a href="https://source.unsplash.com/random?${id == 'living-room' ? 'car' : id}&sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
 					<div class="gallery-overlay"></div>
-					<img class="gallery-img lazy" data-src="https://source.unsplash.com/random?${id}&sig=${data}">
+					<img class="gallery-img lazy" data-src="https://source.unsplash.com/random?${id == 'living-room' ? 'car' : id}&sig=${data}">
 					<div class="gallery-overlay-container">
 						<div class ="gallery-overlay-content fadeIn-bottom">
 							<i class="fi-rr-expand"></i>
