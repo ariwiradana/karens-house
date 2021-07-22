@@ -1,7 +1,7 @@
 $(document).ready(function () {
-    readCarousel();
+    // readCarousel();
     roomType();
-    // dummyImg();
+    dummyImg();
 });
 
 
@@ -19,6 +19,9 @@ function roomType() {
         items: 1
     });
 
+    let dummy = "https://picsum.photos/1280/720?";
+    let img = "https://api-karens-house.000webhostapp.com/foto/room-type/";
+
     $.ajax({
         url: 'https://api-karens-house.000webhostapp.com/read-room-type.php',
         type: 'get',
@@ -32,7 +35,7 @@ function roomType() {
                         [jQuery(
                             `<div class="item index-room-type-content">
                                 <div class="img-content">
-                                    <img src="https://api-karens-house.000webhostapp.com/foto/room-type/${item.thumbnail}">
+                                    <img src="${dummy}${i + 5}">
                                 </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
@@ -114,7 +117,7 @@ function readCarousel() {
 }
 
 function dummyImg() {
-    const N = 3;
+    const N = 10;
     const data = Array.from(Array(N + 1).keys()).slice(1);
     let itemClass;
     let itemIndicatorsClass;
@@ -133,13 +136,10 @@ function dummyImg() {
 
         $('#carousel-img').append(`
                 <div class="${itemClass}">
-                    <img class="d-block w-100 img-dummy" data-src="https://picsum.photos/1920/1080?${item}">
+                    <img class="d-block w-100 img-dummy" src="https://picsum.photos/1920/1080?${item}">
                 </div>
         `);
 
-        $('.img-dummy').lazy({
-            effect: "fadeIn"
-        });
 
         $('#carousel-indicator').append(`
                 <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
@@ -148,7 +148,7 @@ function dummyImg() {
     });
     setInterval(function () {
         stopLoading();
-    }, 4000);
+    }, 2000);
 }
 
 // const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData";

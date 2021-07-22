@@ -1,5 +1,6 @@
 $(document).ready(function () {
-	loadGallery();
+	// loadGallery();
+	dummyImg();
 });
 
 function loadGallery() {
@@ -91,16 +92,42 @@ function ajaxLoad(id, start, limit) {
 }
 
 function dummyImg() {
-	const N = 50;
+	const id = "all";
+	randomImage(id, 4);
+
+	$('.nav-gallery .nav-item').click(function () {
+		let id = $(this).find('.nav-link').attr('href').split('#')[1];
+
+		let child = $(`#gallery-${id}`).children().length;
+
+		child == 0 ? randomImage(id, 4) : child;
+
+	});
+
+	$('.btn-load-more').click(function () {
+		$(this).html(`<i class="fas fa-spinner fa-pulse loading-spinner"></i>`);
+		let id = $('.nav-gallery .nav-item').find('.active').attr('href').split('#')[1];
+
+		let child = $(`#gallery-${id}`).children().length;
+
+		randomImage(id, 4);
+
+		setTimeout(function () {
+			$('.btn-load-more').html("load more");
+		}, 5000);
+	});
+}
+
+function randomImage(id, N) {
 	const data = Array.from(Array(N + 1).keys()).slice(1);
 	startLoading()
 
 	$.each(data, function (i, data) {
-		$('#img').append(`
+		$(`#gallery-${id == 'living-room' ? 'livingroom' : id}`).append(`
 			<div class="gallery-item">
-				<a href="https://source.unsplash.com/random?sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
+				<a href="https://source.unsplash.com/random?${id}&sig=${data}" data-fancybox="gallery" data-aos="flip-left" data-aos-duration="400">
 					<div class="gallery-overlay"></div>
-					<img class="gallery-img lazy" data-src="https://source.unsplash.com/random?sig=${data}">
+					<img class="gallery-img lazy" data-src="https://source.unsplash.com/random?${id}&sig=${data}">
 					<div class="gallery-overlay-container">
 						<div class ="gallery-overlay-content fadeIn-bottom">
 							<i class="fi-rr-expand"></i>
@@ -110,8 +137,9 @@ function dummyImg() {
 			</div>
 		`);
 
-		$('.gallery-img').lazy({
-			effect: "fadeIn"
+		$('.lazy').lazy({
+			effect: "fadeIn",
+			effectTime: 2000
 		});
 
 	});
