@@ -113,21 +113,6 @@
 
 }
 
-.loading-gif {
-    transition: .4s ease;
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-}
-
-.loading-gif-content {
-    display: flex;
-    background-color: rgba(255, 255, 255, 1);
-    box-sizing: border-box;
-    padding: 1rem;
-    justify-content: center;
-}
-
 @keyframes gradient {
     0% {
         background-position: 0% 50%;

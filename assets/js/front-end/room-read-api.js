@@ -61,7 +61,7 @@ function read_room_type() {
 					$('#room-img').append(`
 						<div class="room-img-item">
 							<a href="https://api-karens-house.000webhostapp.com/${item}" data-fancybox="gallery">
-								<img class="room-img" src="https://api-karens-house.000webhostapp.com/${item}">
+								<img class="room-img" data-src="https://api-karens-house.000webhostapp.com/${item}">
 							</a>
 						</div>
 					`);

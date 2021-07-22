@@ -17,6 +17,7 @@ function loadGallery() {
 	});
 
 	$('.btn-load-more').click(function () {
+		$(this).html(`<i class="fa fa-spinner fa-spin loading-spinner"></i>`);
 		let id = $('.nav-gallery .nav-item').find('.active').attr('href').split('#')[1];
 
 		let child = $(`#gallery-${id}`).children().length;
@@ -27,7 +28,7 @@ function loadGallery() {
 		ajaxLoad(id, start, limit);
 
 		setTimeout(function () {
-			$('.loading-gif-content').fadeOut();
+			$('.btn-load-more').html("load more");
 		}, 5000);
 	});
 }
@@ -37,11 +38,11 @@ function lazyLoad() {
 		effect: "fadeIn",
 		effectTime: 1000,
 		onError: function () {
-			$('.loading-gif-content').fadeOut();
+			$('.btn-load-more').html("load more");
 		},
 
 		onFinishedAll: function () {
-			$('.loading-gif-content').fadeOut();
+			$('.btn-load-more').html("load more");
 		}
 	});
 }
