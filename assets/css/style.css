@@ -45,7 +45,7 @@ section .pages {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    padding: 1rem;
+    padding: .6rem 1rem 1rem 1rem;
 }
 
 .load-more .btn-load-more {
