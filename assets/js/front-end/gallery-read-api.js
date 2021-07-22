@@ -17,7 +17,7 @@ function loadGallery() {
 	});
 
 	$('.btn-load-more').click(function () {
-		$(this).html(`<i class="fa fa-spinner fa-spin loading-spinner"></i>`);
+		$(this).html(`<i class="fas fa-spinner fa-pulse loading-spinner"></i>`);
 		let id = $('.nav-gallery .nav-item').find('.active').attr('href').split('#')[1];
 
 		let child = $(`#gallery-${id}`).children().length;

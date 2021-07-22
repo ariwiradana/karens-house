@@ -46,7 +46,7 @@ section .pages {
     justify-content: center;
     width: 100%;
     box-sizing: border-box;
-    padding: .6rem 1rem 1rem 1rem;
+    padding: .8rem 1rem 1rem 1rem;
 }
 
 .load-more .btn-load-more {
@@ -63,6 +63,10 @@ section .pages {
     transition: .4s ease;
     border-color: var(--primary-light);
     box-shadow: none;
+}
+
+.loading-spinner{
+    font-size: 17px;
 }
 
 .carousel-item {
