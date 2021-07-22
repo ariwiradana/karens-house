@@ -1,6 +1,7 @@
 const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData&map_ids=8d193001f940fde3";
-$.getScript(gmaps, function () {});
+$.getScript(gmaps, function () {
 
+});
 
 function mapData() {
 	startLoading();
@@ -25,9 +26,9 @@ function mapData() {
 				const marker = new google.maps.Marker({
 					position: karenslocation,
 					map,
-					label: {
-						text: "K",
-						color: "white"
+					icon: {
+						url: `https://api-karens-house.000webhostapp.com/icon/karens-icon.svg`,
+						scaledSize: new google.maps.Size(150, 150)
 					},
 					title: "Karens House"
 				});
@@ -35,9 +36,6 @@ function mapData() {
 				let infoWindow = new google.maps.InfoWindow();
 
 				marker.addListener("click", () => {
-					infoWindow.close();
-					infoWindow.setContent(marker.getTitle());
-					infoWindow.open(marker.getMap(), marker);
 					map.setCenter(karenslocation);
 					map.setZoom(14);
 
@@ -54,9 +52,9 @@ function mapData() {
 						position: pos,
 						map,
 						title: `${i + 1}. ${data.location_name}`,
-						label: {
-							text: `${i + 1}`,
-							color: "white"
+						icon: {
+							url: `https://api-karens-house.000webhostapp.com/icon/${data.jenis}.svg`,
+							scaledSize: new google.maps.Size(40, 40)
 						},
 
 						optimized: false,
@@ -132,12 +130,13 @@ function mapData() {
 						zoom: 12,
 					});
 
+
 					const marker = new google.maps.Marker({
 						position: karenslocation,
 						map,
-						label: {
-							text: "K",
-							color: "white"
+						icon: {
+							url: `https://api-karens-house.000webhostapp.com/icon/karens-icon.svg`,
+							scaledSize: new google.maps.Size(150, 150)
 						},
 						title: "Karens House"
 					});
@@ -145,9 +144,6 @@ function mapData() {
 					let infoWindow = new google.maps.InfoWindow();
 
 					marker.addListener("click", () => {
-						infoWindow.close();
-						infoWindow.setContent(marker.getTitle());
-						infoWindow.open(marker.getMap(), marker);
 						map.setCenter(karenslocation);
 						map.setZoom(14);
 
@@ -155,6 +151,7 @@ function mapData() {
 							map.panTo(marker.getPosition());
 						}, 1000);
 					});
+
 
 					$.each(response.data, function (i, data) {
 						let infoWindow = new google.maps.InfoWindow();
@@ -164,9 +161,9 @@ function mapData() {
 							position: pos,
 							map,
 							title: `${i + 1}. ${data.location_name}`,
-							label: {
-								text: `${i + 1}`,
-								color: "white"
+							icon: {
+								url: `https://api-karens-house.000webhostapp.com/icon/${data.jenis}.svg`,
+								scaledSize: new google.maps.Size(40, 40)
 							},
 							optimized: false,
 						});
