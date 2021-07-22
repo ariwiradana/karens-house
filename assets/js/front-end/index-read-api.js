@@ -91,11 +91,11 @@ function readCarousel() {
 
                     $('#carousel-img').append(`
                         <div class="${itemClass}">
-                            <img class="d-block w-100 img-cars" data-src="https://api-karens-house.000webhostapp.com/foto/carousel/${item.nama}">
+                            <img class="d-block w-100 lazy" data-src="https://api-karens-house.000webhostapp.com/foto/carousel/${item.nama}">
                         </div>
                     `);
 
-                    $('.img-cars').lazy({
+                    $('.lazy').lazy({
                         effect: "fadeIn",
                         effectTime: 1000
                     });
