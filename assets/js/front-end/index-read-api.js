@@ -129,12 +129,12 @@ function indexGallery() {
 // front
 function galleryFront() {
     $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=100',
+        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=front',
         type: 'get',
         dataType: 'json',
         success: function (response) {
             if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 10) + 1;
+                let random = Math.floor(Math.random() * 5) + 1;
                 let img = response.data[random].filename;
                 $('#img-gallery-front').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
             }
@@ -148,12 +148,12 @@ function galleryFront() {
 // bedroom
 function galleryBedroom() {
     $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=100&jenis=bedroom',
+        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=bedroom',
         type: 'get',
         dataType: 'json',
         success: function (response) {
             if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 10) + 1;
+                let random = Math.floor(Math.random() * 5) + 1;
                 let img = response.data[random].filename;
                 $('#img-gallery-bedroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
             }
@@ -167,12 +167,12 @@ function galleryBedroom() {
 // livingroom
 function galleryLivingRoom() {
     $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=100',
+        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=livingroom',
         type: 'get',
         dataType: 'json',
         success: function (response) {
             if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 10) + 1;
+                let random = Math.floor(Math.random() * 5) + 1;
                 let img = response.data[random].filename;
                 $('#img-gallery-livingroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
             }
@@ -186,12 +186,12 @@ function galleryLivingRoom() {
 // bathroom
 function galleryBathroom() {
     $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=100',
+        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=bathroom',
         type: 'get',
         dataType: 'json',
         success: function (response) {
             if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 10) + 1;
+                let random = Math.floor(Math.random() * 5) + 1;
                 let img = response.data[random].filename;
                 $('#img-gallery-bathroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
             }
@@ -205,12 +205,12 @@ function galleryBathroom() {
 // terrace
 function galleryTerrace() {
     $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=100',
+        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=terrace',
         type: 'get',
         dataType: 'json',
         success: function (response) {
             if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 10) + 1;
+                let random = Math.floor(Math.random() * 5) + 1;
                 let img = response.data[random].filename;
                 $('#img-gallery-terrace').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
             }

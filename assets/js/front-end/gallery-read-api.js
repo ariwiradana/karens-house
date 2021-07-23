@@ -13,7 +13,7 @@ function loadGallery() {
 		let child = $(`#gallery-${id}`).children().length;
 
 		if (child == 0) {
-			ajaxLoad(id, 0, 4);
+			ajaxLoad(id == 'living-room' ? 'livingroom' : id, 0, 4);
 		}
 	});
 
