@@ -1,7 +1,7 @@
 $(document).ready(function () {
     readCarousel();
     roomType();
-    indexGallery();
+    indexGallery(['front', 'bedroom', 'livingroom', 'bathroom', 'terrace']);
     // dummyImg();
 });
 
@@ -118,106 +118,23 @@ function readCarousel() {
     });
 }
 
-function indexGallery() {
-    galleryFront();
-    galleryBedroom();
-    galleryLivingRoom();
-    galleryBathroom();
-    galleryTerrace();
-}
-
-// front
-function galleryFront() {
-    $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=front',
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 5) + 1;
-                let img = response.data[random].filename;
-                $('#img-gallery-front').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
+function indexGallery(jenis) {
+    $.each(jenis, function (i, data) {
+        $.ajax({
+            url: `https://api-karens-house.000webhostapp.com/read-images.php?jenis=${data}`,
+            type: 'get',
+            dataType: 'json',
+            success: function (response) {
+                if (response.status_code == 200) {
+                    let random = Math.floor(Math.random() * 5) + 1;
+                    let img = response.data[random].filename;
+                    $(`#img-gallery-${data}`).attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
+                }
+            },
+            error: function () {
+                indexGallery();
             }
-        },
-        error: function (e) {
-            galleryFront(e);
-        }
-    });
-}
-
-// bedroom
-function galleryBedroom() {
-    $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=bedroom',
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 5) + 1;
-                let img = response.data[random].filename;
-                $('#img-gallery-bedroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
-            }
-        },
-        error: function (e) {
-            galleryBedroom(e)
-        }
-    });
-}
-
-// livingroom
-function galleryLivingRoom() {
-    $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=livingroom',
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 5) + 1;
-                let img = response.data[random].filename;
-                $('#img-gallery-livingroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
-            }
-        },
-        error: function (e) {
-            galleryLivingRoom(e)
-        }
-    });
-}
-
-// bathroom
-function galleryBathroom() {
-    $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=bathroom',
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 5) + 1;
-                let img = response.data[random].filename;
-                $('#img-gallery-bathroom').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
-            }
-        },
-        error: function (e) {
-            galleryBathroom(e);
-        }
-    });
-}
-
-// terrace
-function galleryTerrace() {
-    $.ajax({
-        url: 'https://api-karens-house.000webhostapp.com/read-images.php?start=0&limit=5&jenis=terrace',
-        type: 'get',
-        dataType: 'json',
-        success: function (response) {
-            if (response.status_code == 200) {
-                let random = Math.floor(Math.random() * 5) + 1;
-                let img = response.data[random].filename;
-                $('#img-gallery-terrace').attr('src', `https://api-karens-house.000webhostapp.com/uploads/gallery/${img}`);
-            }
-        },
-        error: function (e) {
-            galleryTerrace(e);
-        }
+        });
     });
 }
 
