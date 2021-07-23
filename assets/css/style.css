@@ -1339,7 +1339,7 @@ footer {
     margin-right: 20vh;
 }
 
-.footer-link-title{
+.footer-link-title {
     font-size: 12px;
     letter-spacing: .5px;
     font-weight: 600;
@@ -1352,7 +1352,7 @@ footer {
     margin-right: 0;
 }
 
-.footer-link{
+.footer-link {
     font-size: 12px;
     letter-spacing: .5px;
     color: var(--text-secondary);
@@ -1361,17 +1361,17 @@ footer {
     transition: .3s ease;
 }
 
-.footer-link:hover{
+.footer-link:hover {
     color: var(--text-dark);
     transition: .3s ease;
 }
 
-.footer-sosmed-content{
+.footer-sosmed-content {
     display: flex;
     margin-top: .5rem;
 }
 
-.footer-sosmed-content a{
+.footer-sosmed-content a {
     color: var(--text-dark);
     margin-left: 1rem;
     border: solid 1px rgb(158, 158, 158);
@@ -1383,36 +1383,46 @@ footer {
     align-items: center;
 }
 
-.footer-sosmed-content a i{
+.footer-sosmed-content a i {
     font-size: 18px;
     color: var(--text-dark);
 }
 
-.logo-icon-content{
+.logo-icon-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 3rem;
 }
 
-.logo-icon-content img{
+.logo-icon-content img {
     width: 35vh;
 }
 
-.copyrigtht-top-content{
+.copyrigtht-top-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     margin-top: 3rem;
 }
 
-.text-copyright{
+.top-content {
+    display: flex;
+}
+
+.sosmed-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.text-copyright {
     letter-spacing: .5px;
     color: var(--text-secondary);
     font-size: 14px;
 }
 
-.copyrigtht-top-content .fi-rr-arrow-up{
+.copyrigtht-top-content .fi-rr-arrow-up {
     font-size: 18px;
     color: var(--text-secondary);
 }
@@ -1904,6 +1914,75 @@ footer {
     .other-room-img-content .item {
         height: 50vh;
     }
+
+
+    /* footer */
+    footer {
+        padding: .7rem;
+    }
+
+    footer hr:nth-child(1) {
+        border: none;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-item {
+        margin-right: 0;
+        flex-grow: 1;
+    }
+
+    .logo-icon-content {
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sosmed-content {
+        margin-top: 1.5rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-sosmed-content a {
+        margin-left: 0;
+        margin-right: 1rem;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+    }
+
+    .footer-sosmed-content a i {
+        font-size: 15px;
+    }
+
+    .footer-sosmed-content a:last-child {
+        margin-right: 0;
+    }
+
+    .copyrigtht-top-content {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .copyrigtht-top-content .fi-rr-arrow-up {
+        margin-left: 1rem;
+        font-size: 16px;
+    }
+
+    .text-copyright {
+        margin-bottom: 0;
+    }
+
+    .top {
+        display: none;
+    }
 }
 
 @media only screen and (min-width: 600px) and (max-width: 1200px) {
@@ -2377,5 +2456,73 @@ footer {
 
     .other-room-img-content .item {
         height: 70vh;
+    }
+
+    /* footer */
+    footer {
+        padding: .7rem;
+    }
+
+    footer hr:nth-child(1) {
+        border: none;
+    }
+
+    .footer-content {
+        flex-wrap: wrap;
+    }
+
+    .footer-item {
+        margin-right: 0;
+        flex-grow: 1;
+    }
+
+    .logo-icon-content {
+        flex-direction: column;
+        margin-top: 1rem;
+        padding: 1rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .sosmed-content {
+        margin-top: 1.5rem;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer-sosmed-content a {
+        margin-left: 0;
+        margin-right: 1rem;
+        height: 30px;
+        width: 30px;
+        border-radius: 100%;
+    }
+
+    .footer-sosmed-content a i {
+        font-size: 15px;
+    }
+
+    .footer-sosmed-content a:last-child {
+        margin-right: 0;
+    }
+
+    .copyrigtht-top-content {
+        flex-direction: column;
+        padding: 0;
+        margin-top: 1rem;
+        align-items: center;
+    }
+
+    .copyrigtht-top-content .fi-rr-arrow-up {
+        margin-left: 1rem;
+        font-size: 16px;
+    }
+
+    .text-copyright {
+        margin-bottom: 0;
+    }
+
+    .top {
+        display: none;
     }
 }

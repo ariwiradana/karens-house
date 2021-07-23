@@ -43,11 +43,11 @@ function footer() {
     if (title == "Karéns House | Hidden Paradise of Ubud") {
         imgPath = "assets";
         navPath = "";
-        navIndex = "/";
+        navIndex = "index.html";
     } else {
         imgPath = "../assets";
-        navPath = "../assets/";
-        navIndex = "../"
+        navPath = "../index.html/";
+        navIndex = "../index.html"
     }
 
     $('footer').html(`
@@ -108,7 +108,7 @@ function footer() {
         <hr>
         <div class="logo-icon-content">
             <img src="${imgPath}/logo/logo-black.svg" alt="">
-            <div class="d-flex flex-column align-items-end">
+            <div class="sosmed-content">
                 <h6 class="footer-link-title">Stay Connected with Us</h6>
                 <div class="footer-sosmed-content">
                     <a href="https://www.instagram.com/karenshouse_ubud/" target="_blank">
@@ -121,10 +121,10 @@ function footer() {
             </div>
         </div>
         <div class="copyrigtht-top-content">
-            <p class="text-copyright"><small>Copyright 2021, Karéns House Ubud. All Rights Reserved</small></p>
-            <a href="#pages">
+            <p class="text-copyright"><small>Copyright &copy 2021, Karéns House. All Rights Reserved</small></p>
+            <a href="#pages" class="top">
                 <div class="d-flex align-items-center">
-                    <h6 class="text-copyright">Top</h6>
+                    <h6 class="text-copyright"><small>Top</small></h6>
                     <i class="ml-3 fi-rr-arrow-up"></i>
                 </div>
             </a>
