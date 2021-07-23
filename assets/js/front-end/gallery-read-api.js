@@ -1,6 +1,6 @@
 $(document).ready(function () {
-	// loadGallery();
-	dummyImg();
+	loadGallery();
+	// dummyImg();
 });
 
 function loadGallery() {
