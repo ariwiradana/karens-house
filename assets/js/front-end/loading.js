@@ -111,10 +111,10 @@ function footer() {
             <div class="d-flex flex-column align-items-end">
                 <h6 class="footer-link-title">Stay Connected with Us</h6>
                 <div class="footer-sosmed-content">
-                    <a href="" target="_blank">
+                    <a href="https://www.instagram.com/karenshouse_ubud/" target="_blank">
                         <i class="fab fa-instagram"></i>
                     </a>
-                    <a href="#" target="_blank">
+                    <a href="https://www.facebook.com/karenshouseubud/" target="_blank">
                         <i class="fab fa-facebook-f"></i>
                     </a>
                 </div>
