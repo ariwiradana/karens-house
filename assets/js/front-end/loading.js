@@ -180,7 +180,7 @@ function footer() {
         <div class="logo-icon-content">
             <img src="${imgPath}/logo/logo-black.svg" alt="">
             <div class="sosmed-content">
-                <h6 class="footer-link">Stay Connected with Us</h6>
+                <h6 class="footer-link"><small>Stay Connected with Us</small></h6>
                 <div class="footer-sosmed-content">
                     <a href="https://www.instagram.com/karenshouse_ubud/" target="_blank">
                         <i class="fab fa-instagram"></i>
