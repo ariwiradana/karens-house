@@ -597,6 +597,7 @@ section .pages {
     display: flex;
     box-sizing: border-box;
     background-color: white;
+    padding-top: 1rem;
 }
 
 .index-gallery-item {

@@ -35,9 +35,9 @@ function stopLoading() {
 
 function footer() {
 
-    let imgPath = "";
-    let navPath = "";
-    let navIndex = "";
+    let imgPath;
+    let navPath;
+    let navIndex;
     let title = $('title').text();
 
     if (title == "Karéns House | Hidden Paradise of Ubud") {
@@ -180,7 +180,7 @@ function footer() {
         <div class="logo-icon-content">
             <img src="${imgPath}/logo/logo-black.svg" alt="">
             <div class="sosmed-content">
-                <h6 class="footer-link-title">Stay Connected with Us</h6>
+                <h6 class="footer-link">Stay Connected with Us</h6>
                 <div class="footer-sosmed-content">
                     <a href="https://www.instagram.com/karenshouse_ubud/" target="_blank">
                         <i class="fab fa-instagram"></i>
@@ -207,5 +207,10 @@ function footer() {
         console.log(id)
         $(`#icon-${id}`).toggleClass('fi-rr-angle-small-down fi-rr-angle-small-up')
         $(`#${id}`).toggleClass('footer-dropdown-active');
+
+        setTimeout(function () {
+            $(`#${id}`).removeClass('footer-dropdown-active');
+            $(`#icon-${id}`).toggleClass('fi-rr-angle-small-up fi-rr-angle-small-down')
+        }, 4000)
     });
 }
