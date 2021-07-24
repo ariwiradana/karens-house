@@ -1,14 +1,14 @@
 $(document).ready(function () {
     readCarousel();
     roomType();
-    // indexGallery(['front', 'bedroom', 'livingroom', 'bathroom', 'terrace']);
-    indexDummy([
-        ['front', 2],
-        ['bedroom', 4],
-        ['livingroom', 5],
-        ['bathroom', 6],
-        ['terrace', 7]
-    ]);
+    indexGallery(['front', 'bedroom', 'livingroom', 'bathroom', 'terrace']);
+    // indexDummy([
+    //     ['front', 2],
+    //     ['bedroom', 4],
+    //     ['livingroom', 5],
+    //     ['bathroom', 6],
+    //     ['terrace', 7]
+    // ]);
     // dummyImg();
 });
 
@@ -43,7 +43,7 @@ function roomType() {
                         [jQuery(
                             `<div class="item index-room-type-content">
                                 <div class="img-content">
-                                    <img src="${dummy}${item.id}">
+                                    <img src="${img}${item.thumbnail}">
                                 </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
@@ -187,41 +187,38 @@ function dummyImg() {
     }, 2000);
 }
 
-// const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData";
-// $.getScript(gmaps, function () {});
+const gmaps = "https://maps.googleapis.com/maps/api/js?key=AIzaSyCvC1wgMf7631iiv1o7kaNXcnswYQ9b59I&callback=mapData";
+$.getScript(gmaps, function () {});
 
-// function mapData() {
-//     const karenslocation = {
-//         lat: -8.44819898282695,
-//         lng: 115.25355074537637
-//     };
+function mapData() {
+    const karenslocation = {
+        lat: -8.44819898282695,
+        lng: 115.25355074537637
+    };
 
-//     const map = new google.maps.Map(document.querySelector(".index-map"), {
-//         center: karenslocation,
-//         zoom: 11,
-//     });
+    const map = new google.maps.Map(document.querySelector(".index-map"), {
+        center: karenslocation,
+        zoom: 11,
+    });
 
-//     const marker = new google.maps.Marker({
-//         position: karenslocation,
-//         map,
-//         label: {
-//             text: "K",
-//             color: "white"
-//         },
-//         title: "Karens House"
-//     });
+    const marker = new google.maps.Marker({
+        position: karenslocation,
+        map,
+        icon: {
+            url: `https://api-karens-house.000webhostapp.com/icon/karens-icon.svg`,
+            scaledSize: new google.maps.Size(150, 150)
+        },
+        title: "Karens House"
+    });
 
-//     let infoWindow = new google.maps.InfoWindow();
+    let infoWindow = new google.maps.InfoWindow();
 
-//     marker.addListener("click", () => {
-//         infoWindow.close();
-//         infoWindow.setContent(marker.getTitle());
-//         infoWindow.open(marker.getMap(), marker);
-//         map.setCenter(karenslocation);
-//         map.setZoom(14);
+    marker.addListener("click", () => {
+        map.setCenter(karenslocation);
+        map.setZoom(14);
 
-//         setTimeout(function () {
-//             map.panTo(marker.getPosition());
-//         }, 1000);
-//     });
-// }
+        setTimeout(function () {
+            map.panTo(marker.getPosition());
+        }, 1000);
+    });
+}
