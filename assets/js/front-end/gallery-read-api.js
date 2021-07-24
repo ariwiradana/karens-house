@@ -11,9 +11,14 @@ function loadGallery() {
 		let id = $(this).find('.nav-link').attr('href').split('#')[1];
 
 		let child = $(`#gallery-${id}`).children().length;
+		console.log(child)
 
-		if (child == 0) {
-			ajaxLoad(id == 'living-room' ? 'livingroom' : id, 0, 4);
+		if (id == 'living-room') {
+			id = 'livingroom';
+		}
+
+		if (child === 0) {
+			ajaxLoad(id, 0, 4);
 		}
 	});
 

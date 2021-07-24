@@ -1861,7 +1861,7 @@ footer {
     /* location */
     .map-container {
         flex-direction: column-reverse;
-        margin-top: 3.5rem;
+        margin-top: 3.2rem;
     }
 
     .map-item:nth-child(2) {

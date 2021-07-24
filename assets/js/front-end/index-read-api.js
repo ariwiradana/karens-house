@@ -128,7 +128,7 @@ function readCarousel() {
 function indexGallery(jenis) {
     $.each(jenis, function (i, data) {
         $.ajax({
-            url: `https://api-karens-house.000webhostapp.com/read-images.php?jenis=${data}`,
+            url: `https://api-karens-house.000webhostapp.com/read-images.php?jenis=${data}&start=0&limit=10`,
             type: 'get',
             dataType: 'json',
             success: function (response) {
