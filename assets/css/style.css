@@ -1819,6 +1819,10 @@ footer {
         opacity: 1;
     }
 
+    .index-gallery-item:nth-child(1)::after {
+        opacity: 1;
+    }
+
     /* gallery */
 
     .gallery-header {
@@ -2429,6 +2433,10 @@ footer {
         margin-right: 0 !important;
         margin-left: 0 !important;
         margin-bottom: 0 !important;
+    }
+
+    .index-gallery-item:nth-child(1)::after {
+        opacity: 1;
     }
 
     .index-gallery-content {

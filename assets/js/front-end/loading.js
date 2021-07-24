@@ -211,6 +211,6 @@ function footer() {
         setTimeout(function () {
             $(`#${id}`).removeClass('footer-dropdown-active');
             $(`#icon-${id}`).toggleClass('fi-rr-angle-small-up fi-rr-angle-small-down')
-        }, 4000)
+        }, 6000)
     });
 }
