@@ -46,7 +46,7 @@ function footer() {
         navIndex = "index.html";
     } else {
         imgPath = "../assets";
-        navPath = "../index.html/";
+        navPath = "../";
         navIndex = "../index.html"
     }
 
