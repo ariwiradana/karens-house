@@ -1373,11 +1373,11 @@ footer {
 .footer-sosmed-content a {
     color: var(--text-dark);
     margin-left: 1rem;
-    border: solid 1px rgb(158, 158, 158);
+    border: solid 1px rgb(182, 182, 182);
     display: flex;
-    width: 35px;
+    width: 40px;
     border-radius: 50%;
-    height: 35px;
+    height: 40px;
     justify-content: center;
     align-items: center;
 }
@@ -1429,6 +1429,10 @@ footer {
 .marker-gmaps {
     background-color: white;
     color: white;
+}
+
+.mobile-footer-link{
+    display: none;
 }
 
 @media only screen and (max-width: 600px) {
