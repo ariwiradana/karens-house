@@ -1,7 +1,14 @@
 $(document).ready(function () {
     readCarousel();
     roomType();
-    indexGallery(['front', 'bedroom', 'livingroom', 'bathroom', 'terrace']);
+    // indexGallery(['front', 'bedroom', 'livingroom', 'bathroom', 'terrace']);
+    indexDummy([
+        ['front', 2],
+        ['bedroom', 4],
+        ['livingroom', 5],
+        ['bathroom', 6],
+        ['terrace', 7]
+    ]);
     // dummyImg();
 });
 
@@ -36,7 +43,7 @@ function roomType() {
                         [jQuery(
                             `<div class="item index-room-type-content">
                                 <div class="img-content">
-                                    <img src="${img}${item.thumbnail}">
+                                    <img src="${dummy}${item.id}">
                                 </div>
                                 <div class="index-room-type-text-content">
                                     <p class="explore text-dark text-left mb-1"><small>Room Type</small></p>
@@ -53,7 +60,7 @@ function roomType() {
                                         </div>
                                     </div>
 
-                                    <p class="index-room-type-desc">${item.desc.length > 150 ? item.desc.substring(0, 150) + '...' : item.desc}</p>
+                                    <p class="index-room-type-desc">${item.desc.length > 100 ? item.desc.substring(0, 100) + '...' : item.desc}</p>
                                     <a href="rooms/?type=${item.id}">
                                         <p class="explore"><small>Explore <span>&#10230;</span></small></p>
                                     </a>
@@ -135,6 +142,12 @@ function indexGallery(jenis) {
                 indexGallery();
             }
         });
+    });
+}
+
+function indexDummy(data) {
+    $.each(data, function (i, data) {
+        $(`#img-gallery-${data[0]}`).attr('src', `https://picsum.photos/1920/1080?${data[1]}`);
     });
 }
 

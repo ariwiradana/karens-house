@@ -105,7 +105,78 @@ function footer() {
                 </a>
             </div>
         </div>
-        <hr>
+        <hr class="mb-0">
+        <div class="mobile-footer-link" data-selected="footer-index">
+            <div class="footer-dropdown">            
+                <h6 class="footer-link-title">Karéns House</h6>
+                <i id="icon-footer-index" class="footer-dropdown-icon fi-rr-angle-small-down"></i>
+            </div>
+            <div class="footer-dropdown-link" id="footer-index">
+                <a href="${navIndex}#about">
+                    <h6 class="footer-link">About</h6>
+                </a>
+                <a href="${navIndex}#rooms">
+                    <h6 class="footer-link">Room Types</h6>
+                </a>
+                <a href="${navIndex}#discover">
+                    <h6 class="footer-link">Discover</h6>
+                </a>
+                <a href="${navIndex}#location">
+                    <h6 class="footer-link">Location</h6>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-footer-link" data-selected="footer-room-type">
+            <div class="footer-dropdown">            
+                <h6 class="footer-link-title">Room Types</h6>
+                <i id="icon-footer-room-type" class="footer-dropdown-icon fi-rr-angle-small-down"></i>
+            </div>
+            <div class="footer-dropdown-link" id="footer-room-type">
+                <a href="${navPath}rooms/?type=1">
+                    <h6 class="footer-link">Family Room</h6>
+                </a>
+                <a href="${navPath}rooms/?type=2">
+                    <h6 class="footer-link">Double Room Terrace View</h6>
+                </a>
+                <a href="${navPath}rooms/?type=3">
+                    <h6 class="footer-link">Double Room Mountain View</h6>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-footer-link"  data-selected="footer-gallery">
+            <div class="footer-dropdown">            
+                <h6 class="footer-link-title">Gallery</h6>
+                <i id="icon-footer-gallery" class="footer-dropdown-icon fi-rr-angle-small-down"></i>
+            </div>
+            <div class="footer-dropdown-link" id="footer-gallery">
+                <a href="${navPath}gallery/">
+                    <h6 class="footer-link">Front</h6>
+                </a>
+                <a href="${navPath}gallery/">
+                    <h6 class="footer-link">Bedroom</h6>
+                </a>
+                <a href="${navPath}gallery/">
+                    <h6 class="footer-link">Living Room</h6>
+                </a>
+                <a href="${navPath}gallery/">
+                    <h6 class="footer-link">Bathroom</h6>
+                </a>
+                <a href="${navPath}gallery/">
+                    <h6 class="footer-link">Terrace</h6>
+                </a>
+            </div>
+        </div>
+        <div class="mobile-footer-link" data-selected="footer-location">
+            <div class="footer-dropdown">            
+                <h6 class="footer-link-title">Location</h6>
+                <i id="icon-footer-location" class="footer-dropdown-icon fi-rr-angle-small-down"></i>
+            </div>
+            <div class="footer-dropdown-link" id="footer-location">
+                <a href="${navPath}location/">
+                    <h6 class="footer-link">Nearby Location</h6>
+                </a>
+            </div>
+        </div>
         <div class="logo-icon-content">
             <img src="${imgPath}/logo/logo-black.svg" alt="">
             <div class="sosmed-content">
@@ -130,4 +201,11 @@ function footer() {
             </a>
         </div>
     `);
+
+    $('.mobile-footer-link').click(function () {
+        let id = $(this).data('selected');
+        console.log(id)
+        $(`#icon-${id}`).toggleClass('fi-rr-angle-small-down fi-rr-angle-small-up')
+        $(`#${id}`).toggleClass('footer-dropdown-active');
+    });
 }
