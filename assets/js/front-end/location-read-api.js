@@ -21,6 +21,7 @@ function mapData() {
 				const map = new google.maps.Map(document.querySelector(".map-content"), {
 					center: karenslocation,
 					zoom: 11,
+					mapTypeId: google.maps.MapTypeId.HYBRID,
 				});
 
 				const marker = new google.maps.Marker({
@@ -128,6 +129,7 @@ function mapData() {
 					const map = new google.maps.Map(document.querySelector(".map-content"), {
 						center: karenslocation,
 						zoom: 12,
+						mapTypeId: google.maps.MapTypeId.HYBRID,
 					});
 
 

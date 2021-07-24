@@ -199,6 +199,7 @@ function mapData() {
     const map = new google.maps.Map(document.querySelector(".index-map"), {
         center: karenslocation,
         zoom: 11,
+        mapTypeId: google.maps.MapTypeId.HYBRID,
     });
 
     const marker = new google.maps.Marker({
