@@ -1785,7 +1785,7 @@ footer {
 
     .index-gallery-item img {
         width: 100%;
-        height: 45vh;
+        height: 30vh;
     }
 
     .index-gallery-item:last-child {
@@ -1816,11 +1816,11 @@ footer {
     }
 
     .index-gallery-item-right::after {
-        opacity: 1;
+        opacity: .95;
     }
 
     .index-gallery-item:nth-child(1)::after {
-        opacity: 1;
+        opacity: .95;
     }
 
     /* gallery */
@@ -2435,8 +2435,12 @@ footer {
         margin-bottom: 0 !important;
     }
 
+    .index-gallery-item-right::after {
+        opacity: .95;
+    }
+
     .index-gallery-item:nth-child(1)::after {
-        opacity: 1;
+        opacity: .95;
     }
 
     .index-gallery-content {
