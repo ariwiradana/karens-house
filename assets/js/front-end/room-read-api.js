@@ -14,7 +14,6 @@ function read_room_type() {
 		dataType: 'json',
 		success: function (response) {
 			if (response.status_code == 200) {
-				stopLoading();
 				const data = response.data[0];
 				const facilities = response.data[0].facilities
 
@@ -68,7 +67,10 @@ function read_room_type() {
 
 					$('.room-img').lazy({
 						effect: "fadeIn",
-						effectTIme: 1000
+						effectTIme: 1000,
+						onFinishedAll: function () {
+							stopLoading();
+						}
 					});
 				});
 			}
