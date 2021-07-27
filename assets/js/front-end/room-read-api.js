@@ -114,13 +114,16 @@ function read_other_room() {
 		dots: false,
 		responsive: {
 			0: {
-				items: 1
+				items: 1,
+				margin: 0
 			},
 			700: {
-				items: 2
+				items: 1,
+				margin: 0
 			},
 			1000: {
-				items: 3
+				items: 3,
+				margin: 5
 			}
 		}
 	});

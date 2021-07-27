@@ -1245,6 +1245,10 @@ section .pages {
     margin: 4px;
 }
 
+.other-room-container{
+    margin-bottom: 0rem;
+}
+
 .other-room-img-content {
     margin-top: 3rem;
 }
@@ -1769,6 +1773,10 @@ footer {
         text-justify: inter-word;
     }
 
+    .room-container {
+        padding: 0 !important;
+    }
+
     .index-room-type-content {
         flex-direction: column;
         margin: .6rem;
@@ -1952,8 +1960,16 @@ footer {
         font-size: 13px;
     }
 
+    .other-room-container{
+        margin-bottom: 0rem;
+    }
+
     .other-room-overlay {
         padding: 1.5rem;
+    }
+
+    .other-room-container{
+        padding: 0 !important;
     }
 
     .other-room-overlay .overlay-title {
@@ -1966,6 +1982,19 @@ footer {
 
     .other-room-img-content .item {
         height: 50vh;
+    }
+
+    .other-room-header {
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+
+    .other-room-header .page-title::after {
+        margin-bottom: 0;
+    }
+
+    .other-room-img-content {
+        margin-top: 0;
     }
 
 
@@ -2090,7 +2119,7 @@ footer {
         width: 100%;
     }
 
-    .btn-expolore-map{
+    .btn-expolore-map {
         display: flex;
         justify-content: flex-end;
     }
@@ -2390,6 +2419,10 @@ footer {
         text-justify: inter-word;
     }
 
+    .room-container {
+        padding: 0 !important;
+    }
+
     .index-room-type-content {
         flex-direction: column;
         margin: .6rem;
@@ -2565,6 +2598,23 @@ footer {
         font-size: 13px;
     }
 
+    .other-room-container{
+        margin-bottom: 0rem;
+    }
+
+    .other-room-header {
+        box-sizing: border-box;
+        padding: 2rem;
+    }
+
+    .other-room-header .page-title::after {
+        margin-bottom: 0;
+    }
+
+    .other-room-img-content {
+        margin-top: 0;
+    }
+
     .other-room-overlay {
         padding: 1.5rem;
     }
@@ -2580,6 +2630,7 @@ footer {
     .other-room-img-content .item {
         height: 70vh;
     }
+
 
     /* footer */
     footer {
@@ -2701,7 +2752,7 @@ footer {
         width: 100%;
     }
 
-    .btn-expolore-map{
+    .btn-expolore-map {
         display: flex;
         justify-content: flex-end;
     }

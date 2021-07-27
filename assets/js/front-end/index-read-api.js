@@ -108,15 +108,16 @@ function readCarousel() {
 
                     $('.lazy').lazy({
                         effect: "fadeIn",
-                        effectTime: 1000
+                        effectTime: 1000,
+                        onFinishedAll: function () {
+                            stopLoading();
+                        }
                     });
 
                     $('#carousel-indicator').append(`
                         <li data-target="#my-carousel" data-slide-to="${totalItems}" class="${itemIndicatorsClass}"></li>
                     `);
                 });
-
-                stopLoading()
             }
         },
         error: function () {
