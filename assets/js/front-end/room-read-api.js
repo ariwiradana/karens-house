@@ -33,6 +33,7 @@ function read_room_type() {
 						</div>
 					`);
 				});
+				stopLoading();
 			}
 		},
 		error: function () {
@@ -68,9 +69,7 @@ function read_room_type() {
 					$('.room-img').lazy({
 						effect: "fadeIn",
 						effectTIme: 1000,
-						onFinishedAll: function () {
-							stopLoading();
-						}
+						onFinishedAll: function () {}
 					});
 				});
 			}
