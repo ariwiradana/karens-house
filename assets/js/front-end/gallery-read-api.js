@@ -77,7 +77,7 @@ function ajaxLoad(id, start, limit) {
 							<img class="gallery-img" data-src="https://api-karens-house.000webhostapp.com/uploads/gallery/${obj.filename}" alt="${obj.jenis}">
 							<div class="gallery-overlay-container">
 								<div class ="gallery-overlay-content fadeIn-bottom">
-									<i class="fi-rr-expand"></i>
+									<i class="uil uil-expand-alt"></i>
 								</div>
 							</div>
 						</a>
