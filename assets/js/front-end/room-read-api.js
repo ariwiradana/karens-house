@@ -56,7 +56,6 @@ const roomType = async () => {
 }
 
 const otherRoom = async () => {
-	startLoading();
 	let owl = $('#other-room').owlCarousel({
 		loop: true,
 		smartSpeed: 500,
@@ -88,7 +87,6 @@ const otherRoom = async () => {
 	} = await req.json();
 
 	if (status_code == 200) {
-		stopLoading();
 		data.forEach((obj, i) => {
 			const row = `
 			<div class="item">
