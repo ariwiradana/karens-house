@@ -84,7 +84,6 @@ const navigationBar = () => {
       navURL = "../"
    }
 
-   console.log(navURL)
    const navContainer = document.querySelector('.nav-container');
    const row = `
       <div class="nav-content">
