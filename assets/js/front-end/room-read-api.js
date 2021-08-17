@@ -33,12 +33,14 @@ const roomType = async () => {
 			facilityContent.insertAdjacentHTML('beforeend', row)
 		});
 
+		stopLoading();
+
 		const roomImg = obj.images;
 		roomImg.forEach((obj, i) => {
 			const roomImgContent = document.querySelector('#room-img');
 			const row =
 				`<div class="room-img-item">
-					<a href="https://api-karens-house.000webhostapp.com/foto/room-type/${obj.category == 1 ? 'family' : obj.category == 2 ?'mountain' : 'terrace'}/${obj.image}" data-fancybox="gallery">
+					<a href="https://api-karens-house.000webhostapp.com/foto/room-type/${obj.type}" data-fancybox="gallery">
 						<img class="room-img" data-src="https://api-karens-house.000webhostapp.com/${obj.image}" alt="${obj.category}">
 					</a>
 				</div>`;

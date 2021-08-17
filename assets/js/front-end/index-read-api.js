@@ -74,7 +74,7 @@ const roomType = async () => {
         responsive: {
             0: {
                 items: 1,
-                margin: 0
+                margin: 15
             },
             800: {
                 items: 2,
@@ -113,7 +113,7 @@ const roomType = async () => {
                                 <h6>${obj.bed}<h6>
                             </div>
                         </div>
-                        <p class="index-room-desc">${obj.desc.length > 100 ? obj.desc.substring(0, 100) + '...' : obj.desc}</p>
+                        <p class="index-room-desc">${obj.desc.length > 70 ? obj.desc.substring(0, 70) + '...' : obj.desc}</p>
                         <a href="rooms/" class="mt-4">
                             <button class="btn btn-block btn-outline-primary btn-room-detail" data-id="${obj.id}">See Details <span>&#10230;</span></button>
                         </a>

@@ -8,7 +8,7 @@
     --text-secondary: #6e6e6e;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap');
 
 /* ================CONFIG=========================== */
@@ -18,13 +18,17 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 
 body {
     background-color: #F0f0f0;
     height: 100%;
+}
+
+p{
+    font-weight: 400;
 }
 
 .overflow-hidden {
@@ -506,6 +510,7 @@ section .pages {
     letter-spacing: 1px;
     width: 90%;
     color: white;
+    font-weight: 400;
 }
 
 .page-desc::after {

@@ -33,7 +33,7 @@ const customAlert = (header, title) => {
 
 const customAlertBooking = (header, data) => {
     const customAlert = document.querySelector('.custom-alert');
-    const row = `a
+    const row = `
         <div class="alert-container animate__animated animate__fadeIn">
             <div class="alert-content animate__animated animate__slideInUp">
                 <div class="alert-header">

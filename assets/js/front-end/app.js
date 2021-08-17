@@ -2,7 +2,6 @@ $(document).ready(() => {
    navConfig();
    mobileSideNavigation();
    footer();
-   updateActiveSidenav();
    navbarScroll();
 });
 
@@ -70,6 +69,9 @@ const navConfig = () => {
    if (title == 'Karéns House | Hidden Paradise of Ubud') {
       navigationBar();
       navigationBarWhite();
+   } else if (title == 'Rooms | Karéns House') {
+      navigationBar();
+      navigationBarWhite();
    } else {
       navigationBarWhite();
    }
@@ -115,11 +117,11 @@ const navigationBar = () => {
                <div class="nav-items-link dropdown">
                   <a href="#">Rooms <i class="uil uil-angle-down icon-sm text-light"></i></a>
                   <div class="dropdown-content">
-                     <a class="id-room" href="${navURL}rooms/" room-id="1">Family Room</a>
+                     <a class="id-room" href="${navURL}rooms/" data-room="1">Family Room</a>
                      <hr>
-                     <a class="id-room" href="${navURL}rooms/" room-id="2">Double Room Mountain View</a>
+                     <a class="id-room" href="${navURL}rooms/" data-room="2">Double Room Mountain View</a>
                      <hr>
-                     <a class="id-room" href="${navURL}rooms/" room-id="3">Double Room Terrace View</a>
+                     <a class="id-room" href="${navURL}rooms/" data-room="3">Double Room Terrace View</a>
                   </div>
                </div>
                <div class="nav-items-link">
@@ -155,11 +157,11 @@ const navigationBarWhite = () => {
             <div class="nav-white-link dropdown">
                <a href="#">Rooms <i class="uil uil-angle-down icon-sm"></i></a>
                <div class="dropdown-content">
-               <a class="id-room" href="${navURL}rooms/" room-id="1">Family Room</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="1">Family Room</a>
                <hr>
-               <a class="id-room" href="${navURL}rooms/" room-id="2">Double Room Mountain View</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="2">Double Room Mountain View</a>
                <hr>
-               <a class="id-room" href="${navURL}rooms/" room-id="3">Double Room Terrace View</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="3">Double Room Terrace View</a>
                </div>
             </div>
             <div class="nav-white-link">
@@ -176,13 +178,11 @@ const navigationBarWhite = () => {
    navContainerWhite.insertAdjacentHTML('beforeend', row);
 }
 
-const navURL = () => {
-   document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('id-room')) {
-         localStorage.setItem('room-type', e.target.getAttribute('room-id'));
-      }
-   })
-}
+document.addEventListener('click', (e) => {
+   if (e.target.classList.contains('id-room')) {
+      localStorage.setItem('room-type', e.target.dataset.room);
+   }
+})
 
 const mobileSideNavigation = () => {
    const title = document.title;
@@ -210,11 +210,11 @@ const mobileSideNavigation = () => {
          </div>
          <div class="sidenav-dropdown-container">
             <div class="sidenav-dropdown-content">
-               <a class="id-room" href="${navURL}rooms/" room-id="1">Family Room</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="1">Family Room</a>
                <hr>
-               <a class="id-room" href="${navURL}rooms/" room-id="2">Double Room Mountain View</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="2">Double Room Mountain View</a>
                <hr>
-               <a class="id-room" href="${navURL}rooms/" room-id="3">Double Room Terrace View</a>
+               <a class="id-room" href="${navURL}rooms/" data-room="3">Double Room Terrace View</a>
             </div>
          </div>
          <div class="sidenav-mobile-item">
@@ -240,8 +240,8 @@ const mobileSideNavigation = () => {
    sidenavContainer.insertAdjacentHTML('beforeend', row);
 
    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('link-to')) {
-         localStorage.setItem('nav-link', e.target.dataset.link);
+      if (e.target.classList.contains('id-room')) {
+         localStorage.setItem('nav-link', e.target.dataset.room);
       }
    });
 
@@ -314,13 +314,13 @@ function footer() {
                      <div class="d-flex flex-column">
                         <h6 class="footer-link-title footer-dropdown-web-btn">Room Type</h6>
                         <div class="footer-dropdown-web">
-                           <a href="${navPath}rooms/" class="id-room" room-id="1">
+                           <a href="${navPath}rooms/" class="id-room" data-room="1">
                                  <h6 class="footer-link">Family Room</h6>
                            </a>
-                           <a href="${navPath}rooms/" class="id-room" room-id="2">
+                           <a href="${navPath}rooms/" class="id-room" data-room="2">
                                  <h6 class="footer-link">Double Room Mountain View</h6>
                            </a>
-                           <a href="${navPath}rooms/" class="id-room" room-id="3">
+                           <a href="${navPath}rooms/" class="id-room" data-room="3">
                                  <h6 class="footer-link">Double Room Terrace View</h6>
                            </a>
                         </div>
@@ -347,18 +347,18 @@ function footer() {
                </a>
             </div>
             <div class="mobile-footer-link">
-               <div class="footer-dropdown">            
+               <div class="footer-dropdown btn-footer-dropdown">            
                      <h6 class="footer-link-title">Room Types</h6>
                      <i id="footer-dropdown-icon" class="footer-dropdown-icon uil uil-angle-right"></i>
                </div>
                <div class="footer-dropdown-link">
-                     <a href="${navPath}rooms/" class="id-room" room-id="1">
+                     <a href="${navPath}rooms/" class="id-room" data-room="1">
                         <h6 class="footer-link">Family Room</h6>
                      </a>
-                     <a href="${navPath}rooms/" class="id-room" room-id="2">
+                     <a href="${navPath}rooms/" class="id-room" data-room="2">
                         <h6 class="footer-link">Double Room Mountain View</h6>
                      </a>
-                     <a href="${navPath}rooms/" class="id-room" room-id="3">
+                     <a href="${navPath}rooms/" class="id-room" data-room="3">
                         <h6 class="footer-link">Double Room Terrace View</h6>
                      </a>
                </div>
@@ -417,8 +417,7 @@ function footer() {
    });
 
    document.addEventListener('click', (e) => {
-      if (e.target.classList.contains('footer-dropdown')) {
-         e.preventDefault()
+      if (e.target.classList.contains('btn-footer-dropdown')) {
          document.querySelector('.footer-dropdown-link').classList.toggle('footer-dropdown-active');
       }
 
