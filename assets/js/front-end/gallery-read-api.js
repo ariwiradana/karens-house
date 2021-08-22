@@ -74,7 +74,7 @@ function ajaxLoad(id, start, limit) {
             $.each(response.data, function (i, obj) {
                $(`#gallery-${id}`).append(`
 					<div class="gallery-item">
-						<a href="https://api-karens-house.000webhostapp.com/uploads/gallery/${obj.filename}" data-fancybox="gallery">
+						<a href="https://api-karens-house.000webhostapp.com/foto/gallery/${id}/${obj.filename}" data-fancybox="gallery">
 							<div class="gallery-overlay"></div>
 							<img class="gallery-img" data-src="https://api-karens-house.000webhostapp.com/foto/gallery/${id}/${obj.filename}" alt="${obj.jenis}">
 							<div class="gallery-overlay-container">
